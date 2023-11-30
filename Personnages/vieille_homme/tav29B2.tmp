@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://dr1y80vg3uh77"]
+
+[ext_resource type="Script" path="res://Personnages/tavernier/Tavernier.gd" id="1_0j2uc"]
+[ext_resource type="Script" path="res://Personnages/tavernier/CorpsTavernier.gd" id="1_jpdtg"]
+[ext_resource type="SpriteFrames" uid="uid://btps24o80hhxx" path="res://Personnages/tavernier/tavernierAnimation.tres" id="2_0eerq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hxxv6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cb2la"]
+radius = 100.0
+
+[node name="tavernier" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_0j2uc")
+nomNPC = "Tavernier"
+
+[node name="CorpsNPC" type="CharacterBody2D" parent="."]
+collision_layer = 4
+script = ExtResource("1_jpdtg")
+
+[node name="TimerAnimation" type="Timer" parent="CorpsNPC"]
+
+[node name="AnimationNPC" type="AnimatedSprite2D" parent="CorpsNPC"]
+sprite_frames = ExtResource("2_0eerq")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Hitbox" type="CollisionShape2D" parent="CorpsNPC"]
+position = Vector2(0, 8.5)
+shape = SubResource("CapsuleShape2D_hxxv6")
+
+[node name="TimerCorrectionAnimation" type="Timer" parent="CorpsNPC"]
+
+[node name="Zone_Detection_Joueur" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cb2la")
+
+[node name="Nom" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -46.0
+offset_right = 20.0
+offset_bottom = -23.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerDetection" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="timeout" from="CorpsNPC/TimerAnimation" to="CorpsNPC" method="_on_timer_animation_timeout"]
+[connection signal="timeout" from="CorpsNPC/TimerCorrectionAnimation" to="CorpsNPC" method="_on_timer_correction_animation_timeout"]

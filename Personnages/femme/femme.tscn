@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8tjywkq6x563"]
+
+[ext_resource type="Script" path="res://Personnages/femme/CorpFemme.gd" id="1_mood5"]
+[ext_resource type="Script" path="res://Personnages/femme/femme.gd" id="1_uitit"]
+[ext_resource type="SpriteFrames" uid="uid://dxaiatknluog" path="res://Personnages/femme/femmeAnimation.tres" id="2_oogat"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ae17x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_efm2m"]
+radius = 100.0
+
+[node name="femme" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_uitit")
+nomNPC = "femme"
+
+[node name="CorpsNPC" type="CharacterBody2D" parent="."]
+collision_layer = 4
+script = ExtResource("1_mood5")
+
+[node name="TimerAnimation" type="Timer" parent="CorpsNPC"]
+
+[node name="AnimationNPC" type="AnimatedSprite2D" parent="CorpsNPC"]
+sprite_frames = ExtResource("2_oogat")
+animation = &"idle"
+
+[node name="Hitbox" type="CollisionShape2D" parent="CorpsNPC"]
+position = Vector2(0, 8.5)
+shape = SubResource("CapsuleShape2D_ae17x")
+
+[node name="TimerCorrectionAnimation" type="Timer" parent="CorpsNPC"]
+
+[node name="Zone_Detection_Joueur" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_efm2m")
+
+[node name="Nom" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -41.0
+offset_right = 20.0
+offset_bottom = -18.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerDetection" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="timeout" from="CorpsNPC/TimerAnimation" to="CorpsNPC" method="_on_timer_animation_timeout"]
+[connection signal="timeout" from="CorpsNPC/TimerCorrectionAnimation" to="CorpsNPC" method="_on_timer_correction_animation_timeout"]
