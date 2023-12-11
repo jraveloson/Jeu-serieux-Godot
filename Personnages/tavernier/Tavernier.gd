@@ -20,10 +20,10 @@ func _process(delta):
 			$TimerDetection.start()
 			show_label()
 			if Input.is_action_pressed("Intéraction") && peutInterargir == true && etatDialogue == false:
-				$CL_Tavernier/DialogueBox.start("Tavernier")
+				$CL_Tavernier/DialogueBoxTavernier.start("Tavernier")
 	if bodies.is_empty():
 		hide_label()
-		$CL_Tavernier/DialogueBox.stop()
+		$CL_Tavernier/DialogueBoxTavernier.stop()
 			
 	
 	

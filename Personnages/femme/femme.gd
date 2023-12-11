@@ -20,7 +20,7 @@ func _process(delta):
 			$TimerDetection.start()
 			show_label()
 			if Input.is_action_pressed("Intéraction") && peutInterargir == true && etatDialogue == false:
-				$CL_femme/DialogueBox.start("Femme")
+				$CL_femme/DialogueBoxFemme.start("Femme")
 	if bodies.is_empty():
 		hide_label()
 

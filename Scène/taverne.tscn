@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://q42od8yd1v2u"]
+
+[ext_resource type="PackedScene" uid="uid://d1wmm1av4qdbk" path="res://Joueur/player.tscn" id="1_ra4e5"]
+
+[node name="Taverne" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_ra4e5")]
+position = Vector2(957, -81)
+collision_layer = 2
