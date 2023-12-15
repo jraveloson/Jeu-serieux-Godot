@@ -6178,7 +6178,6 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 

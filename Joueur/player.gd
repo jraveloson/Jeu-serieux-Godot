@@ -31,12 +31,7 @@ func _physics_process(delta):
 	
 	# Comparaison avec une chaîne de caractères
 	if current_scene_name == "Amboise":
-		print("Oui")
 		Global.last_world_position = position
-	else:
-		print("Non")	
-	
-	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	direction = Input.get_vector("left", "right", "up", "down")

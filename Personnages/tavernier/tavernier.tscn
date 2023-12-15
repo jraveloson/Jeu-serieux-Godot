@@ -17,6 +17,7 @@ nomNPC = "Tavernier"
 
 [node name="CorpsNPC" type="CharacterBody2D" parent="."]
 collision_layer = 4
+collision_mask = 17
 script = ExtResource("1_jpdtg")
 
 [node name="TimerAnimation" type="Timer" parent="CorpsNPC"]
