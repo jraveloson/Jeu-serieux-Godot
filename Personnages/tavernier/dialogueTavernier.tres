@@ -20,52 +20,52 @@ nodes = {
 "start_id": "Femme"
 },
 "1_1": {
-"dialogue": "Tu as soif ?",
-"offset": Vector2(480, 180),
+"dialogue": "Bienvenue à la taverne du \"Dragon Doré\"",
+"offset": Vector2(420, 80),
 "options": {
 0: {
 "condition": {},
-"link": &"1_2",
-"text": "Oui"
+"link": &"5_1",
+"text": "Boire 2 verres de vin"
 },
 1: {
 "condition": {},
-"link": &"1_3",
-"text": "Non"
+"link": &"5_2",
+"text": "Inviter le seigneur d'Amboise à sa table et parler de politique"
+},
+2: {
+"condition": {},
+"link": "END",
+"text": "Jouer aux jeux de société"
 }
 },
-"size": Vector2(300, 306),
+"size": Vector2(444.798, 443.184),
 "speaker": -1
 },
 "1_2": {
-"dialogue": "3 or la pinte !",
-"offset": Vector2(960, 40),
+"dialogue": "Le seigneur d'Amboise a apprécié la conversation. Vous avez gagné 100 de prestige. Le repas vous a couté 30 de richesse.",
+"offset": Vector2(2400, 400),
 "options": {
 0: {
 "condition": {},
 "link": "END",
-"text": "Je prend"
-},
-1: {
-"condition": {},
-"link": "END",
-"text": "Au revoir"
+"text": ""
 }
 },
-"size": Vector2(300, 307),
+"size": Vector2(300.001, 276),
 "speaker": ""
 },
 "1_3": {
-"dialogue": "C'est pas un hotel ici ! Casses toi !",
-"offset": Vector2(980, 400),
+"dialogue": "Vous avez payé 5 écus les 2 verres",
+"offset": Vector2(1980, -100),
 "options": {
 0: {
 "condition": {},
 "link": "END",
-"text": "Désolé ..."
+"text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300.001, 276),
 "speaker": ""
 },
 "1_4": {
@@ -83,11 +83,83 @@ nodes = {
 "text": "non"
 }
 },
-"size": Vector2(300, 307),
+"size": Vector2(300, 307.002),
 "speaker": ""
+},
+"1_5": {
+"dialogue": "Tu n'as pas assez d'argent",
+"offset": Vector2(1620, 500),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
+"speaker": ""
+},
+"1_6": {
+"dialogue": "Vous n'avez pas assez d'argent",
+"offset": Vector2(1380, 160),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
+"speaker": "Tavernier"
+},
+"4_1": {
+"link": &"4_2",
+"offset": Vector2(1620, 400),
+"type": 2,
+"value": "30",
+"variable": "richesse"
+},
+"4_2": {
+"link": &"1_2",
+"offset": Vector2(2000, 400),
+"type": 1,
+"value": "100",
+"variable": "prestige"
+},
+"4_3": {
+"link": &"1_3",
+"offset": Vector2(1372.27, 21.0379),
+"type": 2,
+"value": "5",
+"variable": "richesse"
+},
+"5_1": {
+"false": &"1_6",
+"offset": Vector2(960, 220),
+"operator": 4,
+"true": &"4_3",
+"value1": "{{richesse}}",
+"value2": "5"
+},
+"5_2": {
+"false": &"1_5",
+"offset": Vector2(1160, 420),
+"operator": 4,
+"true": &"4_1",
+"value1": "{{richesse}}",
+"value2": "30"
 }
 }
-variables = {}
+variables = {
+"prestige": {
+"type": 2,
+"value": 0.0
+},
+"richesse": {
+"type": 2,
+"value": 30.0
+}
+}
 comments = Array[String]([])
 strays = Array[String]([])
 characters = ""
