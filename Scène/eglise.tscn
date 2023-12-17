@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://2xk1ihqxn2t"]
 
-[ext_resource type="Texture2D" uid="uid://d0udk0teoquvl" path="res://gothicvania church/assets/atlas/atlas.png" id="1_m3mwe"]
-[ext_resource type="Texture2D" uid="uid://bfm461p5vk57q" path="res://gothicvania church/assets/environment/background.png" id="2_g7cff"]
-[ext_resource type="Texture2D" uid="uid://cp5s5dp0o4xeb" path="res://gothicvania church/assets/environment/columns.png" id="3_fxh37"]
-[ext_resource type="Texture2D" uid="uid://db12rfoh4p8fu" path="res://gothicvania church/assets/environment/tileset.png" id="4_c1c8m"]
-[ext_resource type="Script" path="res://Scène/sortieEglise.gd" id="5_4dfbm"]
-[ext_resource type="PackedScene" uid="uid://d1wmm1av4qdbk" path="res://Joueur/player.tscn" id="5_rd1t4"]
+[ext_resource type="Texture2D" uid="uid://d0udk0teoquvl" path="res://gothicvania church/assets/atlas/atlas.png" id="1_7yvq3"]
+[ext_resource type="Texture2D" uid="uid://bfm461p5vk57q" path="res://gothicvania church/assets/environment/background.png" id="2_85uwl"]
+[ext_resource type="Texture2D" uid="uid://cp5s5dp0o4xeb" path="res://gothicvania church/assets/environment/columns.png" id="3_6qlwl"]
+[ext_resource type="Texture2D" uid="uid://db12rfoh4p8fu" path="res://gothicvania church/assets/environment/tileset.png" id="4_06i3v"]
+[ext_resource type="Script" path="res://Scène/sortieEglise.gd" id="5_lqcrc"]
+[ext_resource type="PackedScene" uid="uid://d1wmm1av4qdbk" path="res://Joueur/player.tscn" id="6_1676l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0hj4"]
-texture = ExtResource("1_m3mwe")
+texture = ExtResource("1_7yvq3")
 71:0/0 = 0
 71:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 71:0/0/physics_layer_0/angular_velocity = 0.0
@@ -2600,7 +2600,7 @@ texture = ExtResource("1_m3mwe")
 108:19/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2eq6"]
-texture = ExtResource("2_g7cff")
+texture = ExtResource("2_85uwl")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -5417,7 +5417,7 @@ texture = ExtResource("2_g7cff")
 66:13/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cmxwi"]
-texture = ExtResource("3_fxh37")
+texture = ExtResource("3_6qlwl")
 7:0/0 = 0
 7:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:0/0/physics_layer_0/angular_velocity = 0.0
@@ -5774,7 +5774,7 @@ texture = ExtResource("3_fxh37")
 31:11/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6xd4c"]
-texture = ExtResource("4_c1c8m")
+texture = ExtResource("4_06i3v")
 8:1/0 = 0
 8:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:1/0/physics_layer_0/angular_velocity = 0.0
@@ -6166,7 +6166,7 @@ layer_0/tile_data = PackedInt32Array(2490368, 655363, 10, 2555904, 655363, 11, 2
 position = Vector2(289, 604)
 collision_layer = 8
 collision_mask = 2
-script = ExtResource("5_4dfbm")
+script = ExtResource("5_lqcrc")
 nomObject = "Sortie"
 
 [node name="porte" type="CollisionShape2D" parent="TileMap/sortieEglise"]
@@ -6184,14 +6184,14 @@ offset_bottom = 23.0
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(654, 493)
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("2_g7cff")
+texture = ExtResource("2_85uwl")
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer/Sprite2D"]
 show_behind_parent = true
 position = Vector2(-805, 0)
-texture = ExtResource("2_g7cff")
+texture = ExtResource("2_85uwl")
 
-[node name="player" parent="." instance=ExtResource("5_rd1t4")]
+[node name="player" parent="." instance=ExtResource("6_1676l")]
 position = Vector2(290, 599)
 collision_layer = 2
 
