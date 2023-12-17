@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://dakl0x4wmagel"]
+[gd_scene load_steps=52 format=3 uid="uid://dakl0x4wmagel"]
 
 [ext_resource type="Script" path="res://Scène/Amboise.gd" id="1_0xf8i"]
 [ext_resource type="Texture2D" uid="uid://cawata2w2fpf4" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/sliced-tileset/ground.png" id="1_tmhsv"]
@@ -26,7 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://b5p1e8ptxmvjk" path="res://Personnages/npc_vide.tscn" id="21_01mqm"]
 [ext_resource type="PackedScene" uid="uid://c8tjywkq6x563" path="res://Personnages/femme/femme.tscn" id="22_h6fad"]
 [ext_resource type="Resource" uid="uid://beoxctecm6lda" path="res://Personnages/femme/dialogueFemme.tres" id="23_33lhd"]
-[ext_resource type="Resource" uid="uid://cshc1iyd6faw4" path="res://Personnages/dialoguePersonnage.tres" id="23_vc713"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="25_v3ymq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ychi"]
 texture = ExtResource("1_tmhsv")
@@ -663,6 +663,72 @@ script = ExtResource("12_kjy7w")
 [sub_resource type="RichTextEffect" id="RichTextEffect_xnerk"]
 script = ExtResource("13_1dxvp")
 
+[sub_resource type="Resource" id="Resource_unslx"]
+script = ExtResource("25_v3ymq")
+starts = {
+"Tavernier": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(200, 180),
+"start_id": "Tavernier"
+},
+"1_1": {
+"dialogue": "Tu as soif ?",
+"offset": Vector2(480, 180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": "Oui"
+},
+1: {
+"condition": {},
+"link": &"1_3",
+"text": "Non"
+}
+},
+"size": Vector2(300, 306),
+"speaker": -1
+},
+"1_2": {
+"dialogue": "3 or la pinte !",
+"offset": Vector2(960, 40),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": "Je prend"
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Au revoir"
+}
+},
+"size": Vector2(300, 307),
+"speaker": ""
+},
+"1_3": {
+"dialogue": "C'est pas un hotel ici ! Casses toi !",
+"offset": Vector2(980, 400),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": "Désolé ..."
+}
+},
+"size": Vector2(300, 276),
+"speaker": ""
+}
+}
+variables = {}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""
+
 [sub_resource type="RichTextEffect" id="RichTextEffect_2v0hg"]
 script = ExtResource("12_kjy7w")
 
@@ -805,6 +871,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="femme" parent="." instance=ExtResource("22_h6fad")]
+visible = false
 position = Vector2(1130, -105)
 
 [node name="CL_femme" type="CanvasLayer" parent="femme"]
@@ -827,6 +894,7 @@ dialogue_data = ExtResource("23_33lhd")
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_itw7w"), SubResource("RichTextEffect_xnerk")])
 
 [node name="tavernier" parent="." instance=ExtResource("10_yb1cc")]
+visible = false
 position = Vector2(818, -87)
 
 [node name="CL_Tavernier" type="CanvasLayer" parent="tavernier"]
@@ -845,7 +913,7 @@ offset_right = 128.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("11_sho1g")
-dialogue_data = ExtResource("23_vc713")
+dialogue_data = SubResource("Resource_unslx")
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_2v0hg"), SubResource("RichTextEffect_befmu")])
 
 [node name="player" parent="." instance=ExtResource("9_trw3q")]
