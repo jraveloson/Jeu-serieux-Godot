@@ -1,7 +1,8 @@
-[gd_scene load_steps=52 format=3 uid="uid://dakl0x4wmagel"]
+[gd_scene load_steps=53 format=3 uid="uid://dakl0x4wmagel"]
 
 [ext_resource type="PackedScene" uid="uid://0qliln2pnirn" path="res://InterfaceUtilisateur/pausemenu.tscn" id="1_8dlob"]
-[ext_resource type="Script" path="res://Scripts/pause.gd" id="1_usfix"]
+[ext_resource type="Script" path="res://Scène/pause.gd" id="1_jdspv"]
+[ext_resource type="Script" path="res://InterfaceUtilisateur/pausemenu.gd" id="2_7fisx"]
 [ext_resource type="Texture2D" uid="uid://ba17dym30cpdu" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/background.png" id="3_x6ylm"]
 [ext_resource type="Texture2D" uid="uid://vv1d15m5ukfg" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/middleground.png" id="4_3y6uk"]
 [ext_resource type="Texture2D" uid="uid://cawata2w2fpf4" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/sliced-tileset/ground.png" id="5_fulde"]
@@ -677,12 +678,13 @@ script = ExtResource("23_jde6e")
 script = ExtResource("24_hoxvq")
 
 [node name="Amboise" type="Node2D"]
-script = ExtResource("1_usfix")
+script = ExtResource("1_jdspv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="pausemenu" parent="CanvasLayer" node_paths=PackedStringArray("pause_manager") instance=ExtResource("1_8dlob")]
 process_mode = 0
+script = ExtResource("2_7fisx")
 pause_manager = NodePath("../..")
 
 [node name="Arrière_plan" type="ParallaxBackground" parent="."]
