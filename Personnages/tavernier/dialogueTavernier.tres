@@ -39,11 +39,11 @@ nodes = {
 "text": "Jouer aux jeux de société"
 }
 },
-"size": Vector2(444.798, 443.183),
+"size": Vector2(444.798, 443.184),
 "speaker": -1
 },
 "1_2": {
-"dialogue": "Le seigneur d'Amboise a apprécié la conversation. Le repas vous a couté 30 écus.",
+"dialogue": "Le seigneur d'Amboise a apprécié la conversation. Vous avez gagné 100 de prestige. Le repas vous a couté 30 de richesse.",
 "offset": Vector2(2400, 400),
 "options": {
 0: {
@@ -69,12 +69,12 @@ nodes = {
 "speaker": ""
 },
 "1_4": {
-"dialogue": "Faire un don pour la construction d'une nouvelle chapelle",
+"dialogue": "Il fait beau n'est ce pas ?",
 "offset": Vector2(315.819, 770.424),
 "options": {
 0: {
 "condition": {},
-"link": &"5_3",
+"link": "END",
 "text": "oui"
 },
 1: {
@@ -112,19 +112,6 @@ nodes = {
 "size": Vector2(300, 276),
 "speaker": "Tavernier"
 },
-"1_7": {
-"dialogue": "Ce projet généreux t'a valu 40 écus. Bravo, la communauté t'en est reconnaisante",
-"offset": Vector2(1540, 820),
-"options": {
-0: {
-"condition": {},
-"link": "END",
-"text": ""
-}
-},
-"size": Vector2(300, 276),
-"speaker": ""
-},
 "4_1": {
 "link": &"4_2",
 "offset": Vector2(1620, 400),
@@ -146,13 +133,6 @@ nodes = {
 "value": "5",
 "variable": "richesse"
 },
-"4_4": {
-"link": &"1_7",
-"offset": Vector2(1140, 840),
-"type": 2,
-"value": "40",
-"variable": "richesse"
-},
 "5_1": {
 "false": &"1_6",
 "offset": Vector2(960, 220),
@@ -168,20 +148,12 @@ nodes = {
 "true": &"4_1",
 "value1": "{{richesse}}",
 "value2": "30"
-},
-"5_3": {
-"false": "END",
-"offset": Vector2(780, 880),
-"operator": 4,
-"true": &"4_4",
-"value1": "{{richesse}}",
-"value2": "40"
 }
 }
 variables = {
 "prestige": {
 "type": 2,
-"value": 100.0
+"value": 0.0
 },
 "richesse": {
 "type": 2,
