@@ -839,6 +839,7 @@ limit_right = 1753
 [node name="npcVide" parent="." instance=ExtResource("26_8wdkl")]
 visible = false
 position = Vector2(463, -90)
+script = null
 
 [connection signal="input_event" from="ExtérieurBatiment/entréeEglise" to="player" method="_on_entrée_eglise_input_event"]
 [connection signal="dialogue_ended" from="femme/CL_femme/DialogueBoxFemme" to="femme" method="_on_dialogue_box_dialogue_ended"]

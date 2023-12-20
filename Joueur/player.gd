@@ -84,3 +84,16 @@ func _on_dialogue_box_tavernier_dialogue_ended():
 		dialogueActiver = false
 		animation_locked = false
 	
+
+
+func _on_dialogue_box_pretre_dialogue_ended():
+	if idDialogue == "Pretre":
+		dialogueActiver = false
+		animation_locked = false
+
+
+func _on_dialogue_box_pretre_dialogue_started(id):
+	idDialogue = id
+	dialogueActiver = true
+	animated_sprite.play("idle")
+	animation_locked = true

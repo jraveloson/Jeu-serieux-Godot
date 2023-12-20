@@ -19,10 +19,10 @@ func _process(_delta):
 			$TimerDetection.start()
 			show_label()
 			if Input.is_action_pressed("Intéraction") && peutInterargir == true && etatDialogue == false:
-				$CanvasLayer/DialogueBoxPretre.start("Pretre")
+				$CL_Pretre/DialogueBoxPretre.start("Pretre")
 	if bodies.is_empty():
 		hide_label()
-		$CanvasLayer/DialogueBoxPretre.stop()
+		$CL_Pretre/DialogueBoxPretre.stop()
 	
 			
 	
@@ -34,7 +34,8 @@ func _ready():
 	nom_label = $Nom  # Assurez-vous que le nœud Label est correctement référencé dans la scène
 	nom_label.text = nomNPC
 	nom_label.visible = false  # Rend le label invisible au début
-	
+	$CL_Pretre/DialogueBoxPretre.set_variable("prestige", TYPE_INT, Global.prestige)
+	$CL_Pretre/DialogueBoxPretre.set_variable("richesse", TYPE_INT, Global.richesse)
 	
 	
 
@@ -44,16 +45,6 @@ func show_label():
 func hide_label():
 	nom_label.visible = false
 
-	
-func _on_dialogue_box_dialogue_ended():
-	$CorpsNPC.dialogueArret()
-	etatDialogue = false
-
-
-func _on_dialogue_box_dialogue_started(id):
-	$CorpsNPC.dialogueLancer(id)
-	etatDialogue = true
-
 
 func _on_dialogue_box_pretre_variable_changed(var_name, value):
 	if var_name == "prestige":
@@ -62,3 +53,11 @@ func _on_dialogue_box_pretre_variable_changed(var_name, value):
 		Global.richesse = value
 	print("prestige ",Global.prestige)
 	print("richesse ",Global.richesse)
+
+
+func _on_dialogue_box_pretre_dialogue_ended():
+	etatDialogue = false
+
+
+func _on_dialogue_box_pretre_dialogue_started(id):
+	etatDialogue = true
