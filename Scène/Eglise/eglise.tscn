@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://2xk1ihqxn2t"]
+[gd_scene load_steps=20 format=3 uid="uid://2xk1ihqxn2t"]
 
 [ext_resource type="Texture2D" uid="uid://d0udk0teoquvl" path="res://gothicvania church/assets/atlas/atlas.png" id="1_w4otv"]
 [ext_resource type="Texture2D" uid="uid://bfm461p5vk57q" path="res://gothicvania church/assets/environment/background.png" id="2_xmf0w"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://baexyjphxwd6x" path="res://Personnages/pretre/pretre.tscn" id="7_n1nc5"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="8_cog63"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="9_56gee"]
+[ext_resource type="Resource" uid="uid://c348hks62mxma" path="res://Personnages/pretre/dialoguePretre.tres" id="9_v6llo"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="10_fmbsr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0hj4"]
@@ -6150,10 +6151,10 @@ sources/3 = SubResource("TileSetAtlasSource_6xd4c")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7bb5i"]
 size = Vector2(47, 69)
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_5xdva"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_buk8q"]
 script = ExtResource("9_56gee")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_r6j6j"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_56xmg"]
 script = ExtResource("10_fmbsr")
 
 [node name="Eglise" type="Node2D"]
@@ -6213,11 +6214,10 @@ remote_path = NodePath("../../Camera2D")
 position = Vector2(728, 600)
 collision_layer = 4
 collision_mask = 2
-nomNPC = "Pretre"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="pretre"]
+[node name="CL_Pretre" type="CanvasLayer" parent="pretre"]
 
-[node name="DialogueBoxPretre" type="Panel" parent="pretre/CanvasLayer"]
+[node name="DialogueBoxPretre" type="Panel" parent="pretre/CL_Pretre"]
 visible = false
 custom_minimum_size = Vector2(256, 128)
 anchors_preset = 12
@@ -6228,8 +6228,14 @@ offset_top = -233.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("8_cog63")
+dialogue_data = ExtResource("9_v6llo")
+start_id = "Pretre"
 options_vertical = true
 sample_portrait = null
-custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_5xdva"), SubResource("RichTextEffect_r6j6j")])
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_buk8q"), SubResource("RichTextEffect_56xmg")])
 
-[connection signal="variable_changed" from="pretre/CanvasLayer/DialogueBoxPretre" to="pretre" method="_on_dialogue_box_pretre_variable_changed"]
+[connection signal="dialogue_ended" from="pretre/CL_Pretre/DialogueBoxPretre" to="player" method="_on_dialogue_box_pretre_dialogue_ended"]
+[connection signal="dialogue_ended" from="pretre/CL_Pretre/DialogueBoxPretre" to="pretre" method="_on_dialogue_box_pretre_dialogue_ended"]
+[connection signal="dialogue_started" from="pretre/CL_Pretre/DialogueBoxPretre" to="player" method="_on_dialogue_box_pretre_dialogue_started"]
+[connection signal="dialogue_started" from="pretre/CL_Pretre/DialogueBoxPretre" to="pretre" method="_on_dialogue_box_pretre_dialogue_started"]
+[connection signal="variable_changed" from="pretre/CL_Pretre/DialogueBoxPretre" to="pretre" method="_on_dialogue_box_pretre_variable_changed"]

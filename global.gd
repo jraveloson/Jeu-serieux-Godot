@@ -7,7 +7,7 @@ var scene_list = []
 
 
 var prestige = 0
-var richesse = 30
+var richesse = 3000
 var vie
 
 
