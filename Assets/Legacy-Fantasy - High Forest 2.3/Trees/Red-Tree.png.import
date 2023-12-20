@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xeafrt1h2j71"
-path="res://.godot/imported/Red-Tree.png-c6a9a569f37e8b50b0afe1175fe19b47.ctex"
+path="res://.godot/imported/Red-Tree.png-47b3656c1ef425f02ad72b9a45260a4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Legacy-Fantasy - High Forest 2.3/Trees/Red-Tree.png"
-dest_files=["res://.godot/imported/Red-Tree.png-c6a9a569f37e8b50b0afe1175fe19b47.ctex"]
+source_file="res://Assets/Legacy-Fantasy - High Forest 2.3/Trees/Red-Tree.png"
+dest_files=["res://.godot/imported/Red-Tree.png-47b3656c1ef425f02ad72b9a45260a4c.ctex"]
 
 [params]
 

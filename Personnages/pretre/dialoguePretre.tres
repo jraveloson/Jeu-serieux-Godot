@@ -14,25 +14,25 @@ nodes = {
 "start_id": "Pretre"
 },
 "1_1": {
-"dialogue": "Souhaitez vous faire une donation pour financer notre nouvelle chapelle ?",
+"dialogue": "Bienvenue, cher fidèle. Souhaitez vous faire une donation pour financer la construction de notre nouvelle chapelle ?",
 "offset": Vector2(220, -580),
 "options": {
 0: {
 "condition": {},
 "link": &"5_1",
-"text": "Oui mon père"
+"text": "Oui, avec plaisir, mon père"
 },
 1: {
 "condition": {},
 "link": &"1_4",
-"text": "Non mon père"
+"text": "Non, mon père, cela ne va pas ^tre possible pour le moment"
 }
 },
 "size": Vector2(300, 307),
 "speaker": "Prêtre"
 },
 "1_2": {
-"dialogue": "Tu n'as pas le capital nécessaire mon fils...",
+"dialogue": "Tu n'as pas assez d'argent pour effectuer cette donation",
 "offset": Vector2(1020, -440),
 "options": {
 0: {
@@ -42,10 +42,10 @@ nodes = {
 }
 },
 "size": Vector2(300, 276),
-"speaker": "Prêtre"
+"speaker": ""
 },
 "1_3": {
-"dialogue": "Merci pour votre donation, que la bénédiction de Dieu soit sur vous !",
+"dialogue": "Merci mon enfant, que la lumière divine accompagne votre générosité. ",
 "offset": Vector2(1800, -560),
 "options": {
 0: {
@@ -58,7 +58,7 @@ nodes = {
 "speaker": "Prêtre"
 },
 "1_4": {
-"dialogue": "Pas de soucis mon fils",
+"dialogue": "Pas de soucis mon fils, que le bon Dieu veille sur vous.",
 "offset": Vector2(580, -340),
 "options": {
 0: {

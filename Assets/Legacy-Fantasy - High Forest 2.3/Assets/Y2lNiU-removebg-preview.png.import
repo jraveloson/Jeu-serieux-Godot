@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://m0gyxydcf204"
-path="res://.godot/imported/Y2lNiU-removebg-preview.png-20cba959d10068d90204b59173c5fdad.ctex"
+path="res://.godot/imported/Y2lNiU-removebg-preview.png-2c6af219cf5d8ff9e6dd745436925125.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Legacy-Fantasy - High Forest 2.3/Assets/Y2lNiU-removebg-preview.png"
-dest_files=["res://.godot/imported/Y2lNiU-removebg-preview.png-20cba959d10068d90204b59173c5fdad.ctex"]
+source_file="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/Y2lNiU-removebg-preview.png"
+dest_files=["res://.godot/imported/Y2lNiU-removebg-preview.png-2c6af219cf5d8ff9e6dd745436925125.ctex"]
 
 [params]
 

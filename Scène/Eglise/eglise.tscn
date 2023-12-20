@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://baexyjphxwd6x" path="res://Personnages/pretre/pretre.tscn" id="7_n1nc5"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="8_cog63"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="9_56gee"]
-[ext_resource type="Resource" path="res://Personnages/pretre/dialoguePretre.tres" id="9_v6llo"]
+[ext_resource type="Resource" uid="uid://c348hks62mxma" path="res://Personnages/pretre/dialoguePretre.tres" id="9_v6llo"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="10_fmbsr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0hj4"]

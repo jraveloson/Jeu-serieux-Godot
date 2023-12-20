@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://q45ygghkvg38"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_xhivv"]
+
+[resource]
+script = ExtResource("1_xhivv")
+starts = {
+"Marchand": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(411.495, 406.088),
+"start_id": "Marchand"
+},
+"1_1": {
+"dialogue": "Bienvenue, cher visiteur. Que puis-je faire pour vous aujourd'hui ?",
+"offset": Vector2(680, 380),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": "Acheter des épices rares"
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Vendre des bijoux"
+}
+},
+"size": Vector2(300, 307),
+"speaker": "Marchand"
+},
+"1_2": {
+"dialogue": "La transaction",
+"offset": Vector2(1160, 420),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": ""
+}
+}
+variables = {
+"prestige": {
+"type": 2,
+"value": 100.0
+},
+"richesse": {
+"type": 2,
+"value": 30.0
+}
+}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""

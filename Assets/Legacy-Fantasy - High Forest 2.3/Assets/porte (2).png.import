@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfkgam423biif"
-path="res://.godot/imported/porte (2).png-a067ec41561aaa4669ac1cc300ecdf77.ctex"
+path="res://.godot/imported/porte (2).png-5bfce9073012b96c067bd18a10f6798f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Legacy-Fantasy - High Forest 2.3/Assets/porte (2).png"
-dest_files=["res://.godot/imported/porte (2).png-a067ec41561aaa4669ac1cc300ecdf77.ctex"]
+source_file="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/porte (2).png"
+dest_files=["res://.godot/imported/porte (2).png-5bfce9073012b96c067bd18a10f6798f.ctex"]
 
 [params]
 

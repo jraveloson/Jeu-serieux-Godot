@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1j5da62rtbta"
-path="res://.godot/imported/orange.png-49c040c7d08e47a87e5471c1dde685da.ctex"
+path="res://.godot/imported/orange.png-1a0af35108ca0e3b7952555bfa9c8cf3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Legacy-Fantasy - High Forest 2.3/Assets/orange.png"
-dest_files=["res://.godot/imported/orange.png-49c040c7d08e47a87e5471c1dde685da.ctex"]
+source_file="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/orange.png"
+dest_files=["res://.godot/imported/orange.png-1a0af35108ca0e3b7952555bfa9c8cf3.ctex"]
 
 [params]
 
