@@ -59,5 +59,5 @@ func _on_dialogue_box_pretre_dialogue_ended():
 	etatDialogue = false
 
 
-func _on_dialogue_box_pretre_dialogue_started(id):
+func _on_dialogue_box_pretre_dialogue_started(_id):
 	etatDialogue = true
