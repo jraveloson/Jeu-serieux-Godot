@@ -25,5 +25,6 @@ func _on_quitter_pressed():
 
 func _on_recommencer_pressed():
 	Global.recommencer = true
-	get_tree().change_scene_to_file("res://Scène/Amboise.tscn")
+	#Trouver un moyen de relancer la partie 
+	#get_tree().change_scene_to_file("res://Scène/Amboise.tscn")
 	get_tree().reload_current_scene()
