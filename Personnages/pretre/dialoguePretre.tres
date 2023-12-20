@@ -1,0 +1,108 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://c348hks62mxma"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_2c5ra"]
+
+[resource]
+script = ExtResource("1_2c5ra")
+starts = {
+"Pretre": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-120.668, -459.198),
+"start_id": "Pretre"
+},
+"1_1": {
+"dialogue": "Souhaitez vous faire une donation pour financer notre nouvelle chapelle ?",
+"offset": Vector2(220, -580),
+"options": {
+0: {
+"condition": {},
+"link": &"5_1",
+"text": "Oui mon père"
+},
+1: {
+"condition": {},
+"link": &"1_4",
+"text": "Non mon père"
+}
+},
+"size": Vector2(300, 307),
+"speaker": "Prêtre"
+},
+"1_2": {
+"dialogue": "Tu n'as pas le capital nécessaire mon fils...",
+"offset": Vector2(1020, -440),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
+"speaker": "Prêtre"
+},
+"1_3": {
+"dialogue": "Merci pour votre donation, que la bénédiction de Dieu soit sur vous !",
+"offset": Vector2(1800, -560),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
+"speaker": "Prêtre"
+},
+"1_4": {
+"dialogue": "Pas de soucis mon fils",
+"offset": Vector2(580, -340),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
+"speaker": "Prêtre"
+},
+"4_1": {
+"link": &"4_2",
+"offset": Vector2(1020, -560),
+"type": 2,
+"value": "40",
+"variable": "richesse"
+},
+"4_2": {
+"link": &"1_3",
+"offset": Vector2(1420, -560),
+"type": 1,
+"value": "100",
+"variable": "prestige"
+},
+"5_1": {
+"false": &"1_2",
+"offset": Vector2(600, -580),
+"operator": 4,
+"true": &"4_1",
+"value1": "{{richesse}}",
+"value2": "40"
+}
+}
+variables = {
+"prestige": {
+"type": 2,
+"value": 0.0
+},
+"richesse": {
+"type": 2,
+"value": 0.0
+}
+}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""

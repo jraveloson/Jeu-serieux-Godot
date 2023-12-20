@@ -5,7 +5,6 @@
 [resource]
 script = ExtResource("1_nofcl")
 starts = {
-"Femme": &"0_2",
 "Tavernier": &"0_1"
 }
 nodes = {
@@ -13,11 +12,6 @@ nodes = {
 "link": &"1_1",
 "offset": Vector2(200, 180),
 "start_id": "Tavernier"
-},
-"0_2": {
-"link": &"1_4",
-"offset": Vector2(7.0126, 884.407),
-"start_id": "Femme"
 },
 "1_1": {
 "dialogue": "Bienvenue à la taverne du \"Dragon Doré\"",
@@ -35,15 +29,15 @@ nodes = {
 },
 2: {
 "condition": {},
-"link": "END",
+"link": &"4_5",
 "text": "Jouer aux jeux de société"
 }
 },
-"size": Vector2(444.798, 443.184),
+"size": Vector2(444.798, 443.183),
 "speaker": -1
 },
 "1_2": {
-"dialogue": "Le seigneur d'Amboise a apprécié la conversation. Vous avez gagné 100 de prestige. Le repas vous a couté 30 de richesse.",
+"dialogue": "Le seigneur d'Amboise a apprécié la conversation. Le repas vous a couté 30 écus.",
 "offset": Vector2(2400, 400),
 "options": {
 0: {
@@ -52,7 +46,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.001, 276),
+"size": Vector2(300.002, 275.999),
 "speaker": ""
 },
 "1_3": {
@@ -65,25 +59,20 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.001, 276),
+"size": Vector2(300.002, 276),
 "speaker": ""
 },
 "1_4": {
-"dialogue": "Il fait beau n'est ce pas ?",
-"offset": Vector2(315.819, 770.424),
+"dialogue": "Chapeau bas ! Vous êtes impressionnant aux échecs. Vous avez raflé la mise (20 écus). Votre victoire a captivé l'attention de tous.",
+"offset": Vector2(1760, 840),
 "options": {
 0: {
 "condition": {},
 "link": "END",
-"text": "oui"
-},
-1: {
-"condition": {},
-"link": "END",
-"text": "non"
+"text": ""
 }
 },
-"size": Vector2(300, 307.002),
+"size": Vector2(300, 245),
 "speaker": ""
 },
 "1_5": {
@@ -96,7 +85,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300.001, 275.999),
 "speaker": ""
 },
 "1_6": {
@@ -109,7 +98,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300.001, 276),
 "speaker": "Tavernier"
 },
 "4_1": {
@@ -133,6 +122,20 @@ nodes = {
 "value": "5",
 "variable": "richesse"
 },
+"4_5": {
+"link": &"4_6",
+"offset": Vector2(920, 660),
+"type": 1,
+"value": "20",
+"variable": "richesse"
+},
+"4_6": {
+"link": &"1_4",
+"offset": Vector2(1340, 840),
+"type": 1,
+"value": "50",
+"variable": "prestige"
+},
 "5_1": {
 "false": &"1_6",
 "offset": Vector2(960, 220),
@@ -153,7 +156,7 @@ nodes = {
 variables = {
 "prestige": {
 "type": 2,
-"value": 0.0
+"value": 100.0
 },
 "richesse": {
 "type": 2,
