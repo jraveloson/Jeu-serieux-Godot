@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnci4lx63rdjg"]
+[gd_scene load_steps=7 format=3 uid="uid://dnci4lx63rdjg"]
 
 [ext_resource type="Script" path="res://Personnages/tavernier/Tavernier.gd" id="1_0j2uc"]
 [ext_resource type="Script" path="res://Personnages/tavernier/CorpsTavernier.gd" id="1_jpdtg"]
 [ext_resource type="SpriteFrames" uid="uid://btps24o80hhxx" path="res://Personnages/tavernier/tavernierAnimation.tres" id="2_0eerq"]
+[ext_resource type="LabelSettings" uid="uid://dnouf360rvrr0" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_CharacterLabel.tres" id="4_eve28"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hxxv6"]
 
@@ -41,6 +42,7 @@ offset_left = -20.0
 offset_top = -46.0
 offset_right = -19.0
 offset_bottom = -23.0
+label_settings = ExtResource("4_eve28")
 horizontal_alignment = 1
 vertical_alignment = 1
 

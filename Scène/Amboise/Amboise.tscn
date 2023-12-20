@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://dakl0x4wmagel"]
+[gd_scene load_steps=47 format=3 uid="uid://dakl0x4wmagel"]
 
 [ext_resource type="Script" path="res://Scripts/pause.gd" id="1_ndt26"]
 [ext_resource type="PackedScene" uid="uid://0qliln2pnirn" path="res://InterfaceUtilisateur/pausemenu.tscn" id="2_hudwo"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://8jq3oexdty4f" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/props-sliced/house-a.png" id="16_gqmux"]
 [ext_resource type="Script" path="res://Map/entréeBar.gd" id="17_4nahh"]
 [ext_resource type="Script" path="res://Map/entréeMarchand.gd" id="18_oa2i2"]
+[ext_resource type="LabelSettings" uid="uid://ba33t5yxedgnq" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_BuildingLabel.tres" id="18_tfjsi"]
 [ext_resource type="Script" path="res://Map/entréeEglise.gd" id="19_fetns"]
 [ext_resource type="PackedScene" uid="uid://c8tjywkq6x563" path="res://Personnages/femme/femme.tscn" id="20_sieng"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="21_pgnvl"]
@@ -766,6 +767,7 @@ shape = SubResource("RectangleShape2D_rn50a")
 [node name="nomPorte" type="Label" parent="ExtérieurBatiment/entréeTaverne"]
 offset_right = 40.0
 offset_bottom = 23.0
+label_settings = ExtResource("18_tfjsi")
 
 [node name="entréeMarchand" type="Area2D" parent="ExtérieurBatiment"]
 position = Vector2(1420, -20)
@@ -781,6 +783,7 @@ shape = SubResource("RectangleShape2D_rn50a")
 [node name="nomPorte" type="Label" parent="ExtérieurBatiment/entréeMarchand"]
 offset_right = 40.0
 offset_bottom = 23.0
+label_settings = ExtResource("18_tfjsi")
 
 [node name="entréeEglise" type="Area2D" parent="ExtérieurBatiment"]
 position = Vector2(1420, -20)
@@ -796,6 +799,7 @@ shape = SubResource("RectangleShape2D_rn50a")
 [node name="nomPorte" type="Label" parent="ExtérieurBatiment/entréeEglise"]
 offset_right = 40.0
 offset_bottom = 23.0
+label_settings = ExtResource("18_tfjsi")
 
 [node name="femme" parent="." instance=ExtResource("20_sieng")]
 position = Vector2(1091, -24)

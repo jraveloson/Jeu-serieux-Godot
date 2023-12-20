@@ -11,7 +11,7 @@ var richesse = 30
 var vie
 
 
-func _process(delta):
+func _process(_delta):
 	if recommencer:
 		prestige = 0
 		richesse = 30

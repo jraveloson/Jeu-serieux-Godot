@@ -8,7 +8,7 @@ extends Area2D
 
 
 
-func _process(delta):
+func _process(_delta):
 	$Zone_Detection_Joueur.position.x = $CorpsNPC.position.x
 	$Nom.position.x = $CorpsNPC.position.x
 	$Nom.position.y = $CorpsNPC.position.y

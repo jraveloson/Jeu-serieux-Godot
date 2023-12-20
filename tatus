@@ -1,0 +1,66 @@
+[33mcommit b779f2689f183f5e766f65722b9c6776f5c3a53f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Merge: bc4ad48 4fb63fe
+Author: ALLAL Gwénolé <gwenole.a@gmail.com>
+Date:   Wed Dec 20 10:24:23 2023 +0100
+
+    Merge branch 'main' of git.unistra.fr:t3_mod23_e/amboise
+
+[33mcommit bc4ad4861ef7e4eebf6b086b5a8fd26ba084ed1a[m
+Author: ALLAL Gwénolé <gwenole.a@gmail.com>
+Date:   Wed Dec 20 10:18:46 2023 +0100
+
+    Modification de scènes
+
+[33mcommit 4fb63fee1843c7f9779444852ba2ee0b220c9b99[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Adrien <adrien.akgul@etu.unistra.fr>
+Date:   Wed Dec 20 10:13:19 2023 +0100
+
+    Rebase
+
+[33mcommit 896151916ce31e81c8b393dfb004b9e7447f2d95[m
+Author: ALLAL Gwénolé <gwenole.a@gmail.com>
+Date:   Sun Dec 17 18:04:51 2023 +0100
+
+    - Ajout prototype Menu Pause\n-Test Retour à la ligne commit\n-J'espère ça fonctionne
+
+[33mcommit 3f318ba64812fd3fdc4502df2c825f8a55d762ad[m
+Author: root <root@Joanna>
+Date:   Sat Dec 16 15:19:59 2023 +0100
+
+    Ajout dialogue Tavernier
+
+[33mcommit 8d1fcf35ed9d49bba422752e8a3e7f6c8e11a765[m
+Author: Adrien <adrien.akgul@etu.unistra.fr>
+Date:   Fri Dec 15 17:30:37 2023 +0100
+
+    Ajoute de la Taverne
+
+[33mcommit 0edbf867888814ce1678ace452ee870a49439bb2[m
+Author: Adrien <adrien.akgul@etu.unistra.fr>
+Date:   Mon Dec 11 23:57:47 2023 +0100
+
+    Ajout de l'eglise avec l'entre/sortie
+
+[33mcommit ed3b927ccfbfcbc4ac177e641742c564ede08db9[m
+Author: Adrien <adrien.akgul@etu.unistra.fr>
+Date:   Thu Nov 30 19:13:18 2023 +0100
+
+    2 npc en plus
+
+[33mcommit efdb88b0f14beda09f6e9af446d0edb9a86e0c45[m[33m ([m[1;31morigin/dev2-menus[m[33m, [m[1;31morigin/dev1-npc[m[33m, [m[1;32mdev2-menus[m[33m)[m
+Author: ALLAL Gwénolé <gwenole.a@gmail.com>
+Date:   Tue Nov 28 09:37:55 2023 +0100
+
+    Supression du doublon des assets
+
+[33mcommit ce2f85b407bc4502b467aa3f1e639493b59320cf[m
+Author: ALLAL Gwénolé <gwenole.a@gmail.com>
+Date:   Tue Nov 28 09:33:16 2023 +0100
+
+    Ajout du projet Godot
+
+[33mcommit 5c951125c6fd7d487b54137068154d2c4f2890eb[m
+Author: ALLAL GWENOLE <gwenole.allal@etu.unistra.fr>
+Date:   Wed Nov 15 08:58:03 2023 +0000
+
+    Initial commit
