@@ -28,9 +28,7 @@ func _process(_delta):
 		hide_label()
 
 func show_label():
-	
 	nom_label.visible = true
 
 func hide_label():
-	
 	nom_label.visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://2xk1ihqxn2t"]
+[gd_scene load_steps=20 format=3 uid="uid://704jd24x4y4d"]
 
 [ext_resource type="Texture2D" uid="uid://d0udk0teoquvl" path="res://gothicvania church/assets/atlas/atlas.png" id="1_w4otv"]
 [ext_resource type="Texture2D" uid="uid://bfm461p5vk57q" path="res://gothicvania church/assets/environment/background.png" id="2_xmf0w"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://baexyjphxwd6x" path="res://Personnages/pretre/pretre.tscn" id="7_n1nc5"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="8_cog63"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="9_56gee"]
-[ext_resource type="Resource" uid="uid://c348hks62mxma" path="res://Personnages/pretre/dialoguePretre.tres" id="9_v6llo"]
+[ext_resource type="Resource" path="res://Personnages/pretre/dialoguePretre.tres" id="9_v6llo"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="10_fmbsr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0hj4"]

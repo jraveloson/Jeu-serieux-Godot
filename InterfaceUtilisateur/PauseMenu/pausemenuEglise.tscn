@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://0qliln2pnirn"]
+[gd_scene load_steps=5 format=3 uid="uid://bq11dlgy2tvxe"]
 
-[ext_resource type="Script" path="res://InterfaceUtilisateur/pausemenu.gd" id="1_2cj61"]
-[ext_resource type="LabelSettings" uid="uid://d0e6dx24tt0kw" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_MenuTitle.tres" id="2_vxxym"]
-[ext_resource type="LabelSettings" uid="uid://cpy7nxv1xhedi" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_MenuOptions.tres" id="3_nmame"]
+[ext_resource type="Script" path="res://InterfaceUtilisateur/PauseMenu/pausemenu.gd" id="1_4uhoi"]
+[ext_resource type="LabelSettings" uid="uid://d0e6dx24tt0kw" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_MenuTitle.tres" id="2_f1ns7"]
+[ext_resource type="LabelSettings" uid="uid://cpy7nxv1xhedi" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_MenuOptions.tres" id="3_xkyst"]
 
 [sub_resource type="Theme" id="Theme_nwcj2"]
 
@@ -14,7 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_2cj61")
+script = ExtResource("1_4uhoi")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -42,7 +42,7 @@ theme = SubResource("Theme_nwcj2")
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "Pause"
-label_settings = ExtResource("2_vxxym")
+label_settings = ExtResource("2_f1ns7")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -58,7 +58,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Continuer"
-label_settings = ExtResource("3_nmame")
+label_settings = ExtResource("3_xkyst")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -74,7 +74,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Recommencer"
-label_settings = ExtResource("3_nmame")
+label_settings = ExtResource("3_xkyst")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -92,7 +92,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Options"
-label_settings = ExtResource("3_nmame")
+label_settings = ExtResource("3_xkyst")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -108,7 +108,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Quitter"
-label_settings = ExtResource("3_nmame")
+label_settings = ExtResource("3_xkyst")
 horizontal_alignment = 1
 vertical_alignment = 1
 
