@@ -23,9 +23,9 @@ func _physics_process(delta):
 			was_in_air = false
 			animation_locked = false
 	# Handle Jump.
-	if Input.is_action_just_pressed("jump"):
-		if is_on_floor():
-			jump()		
+	#if Input.is_action_just_pressed("jump"):
+	#	if is_on_floor():
+	#		jump()		
 
 	var current_scene_name = get_tree().get_current_scene().get_name()
 	
