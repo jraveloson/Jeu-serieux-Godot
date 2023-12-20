@@ -834,6 +834,7 @@ dialogue_data = ExtResource("22_mluve")
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_itw7w"), SubResource("RichTextEffect_xnerk")])
 
 [node name="tavernier" parent="." instance=ExtResource("25_rine4")]
+visible = false
 position = Vector2(818, -87)
 
 [node name="CL_Tavernier" type="CanvasLayer" parent="tavernier"]
