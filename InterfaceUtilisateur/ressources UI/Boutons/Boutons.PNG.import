@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1ecj5aum5qye"
-path="res://.godot/imported/_153ac619-6e44-495f-99a2-9102c9c6f85a.jpg-20251ac002c8f87958487f4ba2c32fc2.ctex"
+uid="uid://ln78rq05e8d6"
+path="res://.godot/imported/Boutons.PNG-e075fdf18dd9d431344ccec3bc7bd7e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scène/_153ac619-6e44-495f-99a2-9102c9c6f85a.jpg"
-dest_files=["res://.godot/imported/_153ac619-6e44-495f-99a2-9102c9c6f85a.jpg-20251ac002c8f87958487f4ba2c32fc2.ctex"]
+source_file="res://InterfaceUtilisateur/ressources UI/Boutons/Boutons.PNG"
+dest_files=["res://.godot/imported/Boutons.PNG-e075fdf18dd9d431344ccec3bc7bd7e1.ctex"]
 
 [params]
 

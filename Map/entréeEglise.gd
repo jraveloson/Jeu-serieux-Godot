@@ -14,7 +14,7 @@ func _ready():
 
 
 
-func _process(delta):
+func _process(_delta):
 	
 	$nomPorte.position.x = $porte.position.x
 	$nomPorte.position.y = $porte.position.y
@@ -26,7 +26,7 @@ func _process(delta):
 			show_label()
 			if Input.is_action_pressed("Intéraction"):
 				
-				get_tree().change_scene_to_file("res://Scène/eglise.tscn")
+				get_tree().change_scene_to_file("res://Scène/Eglise/eglise.tscn")
 	if bodies.is_empty():
 		hide_label()
 

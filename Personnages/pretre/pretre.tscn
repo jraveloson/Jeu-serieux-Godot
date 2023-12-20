@@ -1,27 +1,29 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5p1e8ptxmvjk"]
+[gd_scene load_steps=7 format=3 uid="uid://baexyjphxwd6x"]
 
-[ext_resource type="Script" path="res://Personnages/npcVide.gd" id="1_ap6c6"]
-[ext_resource type="Script" path="res://Personnages/CorpsNpc_Vide.gd" id="2_ener6"]
-[ext_resource type="SpriteFrames" uid="uid://btps24o80hhxx" path="res://Personnages/tavernier/tavernierAnimation.tres" id="3_4sgnl"]
+[ext_resource type="Script" path="res://Personnages/pretre/pretre.gd" id="1_1dx6i"]
+[ext_resource type="Script" path="res://Personnages/pretre/CorpsPretre.gd" id="2_7eevs"]
+[ext_resource type="SpriteFrames" uid="uid://btps24o80hhxx" path="res://Personnages/tavernier/tavernierAnimation.tres" id="3_vixtv"]
+[ext_resource type="LabelSettings" uid="uid://dnouf360rvrr0" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_CharacterLabel.tres" id="4_cur1q"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fp5oo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rcmmc"]
 radius = 100.0
 
-[node name="femme" type="Area2D"]
-script = ExtResource("1_ap6c6")
+[node name="pretre" type="Area2D"]
+script = ExtResource("1_1dx6i")
 
 [node name="CorpsNPC" type="CharacterBody2D" parent="."]
 collision_layer = 4
-script = ExtResource("2_ener6")
+script = ExtResource("2_7eevs")
 
 [node name="TimerAnimation" type="Timer" parent="CorpsNPC"]
 
 [node name="AnimationNPC" type="AnimatedSprite2D" parent="CorpsNPC"]
-sprite_frames = ExtResource("3_4sgnl")
+sprite_frames = ExtResource("3_vixtv")
 animation = &"walk"
 autoplay = "idle"
+flip_h = true
 
 [node name="Hitbox" type="CollisionShape2D" parent="CorpsNPC"]
 position = Vector2(0, 8.5)
@@ -37,6 +39,7 @@ offset_left = -20.0
 offset_top = -46.0
 offset_right = 20.0
 offset_bottom = -23.0
+label_settings = ExtResource("4_cur1q")
 horizontal_alignment = 1
 vertical_alignment = 1
 
