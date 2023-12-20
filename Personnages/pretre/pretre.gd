@@ -4,14 +4,9 @@ extends Area2D
 @export var peutInterargir : bool = true
 @export var nomNPC = "default"
 @export var etatDialogue : bool = false
-var prestige
-var richesse
 
 
 
-
-
-@warning_ignore("unused_parameter")
 func _process(delta):
 	$Zone_Detection_Joueur.position.x = $CorpsNPC.position.x
 	$Nom.position.x = $CorpsNPC.position.x
@@ -24,10 +19,10 @@ func _process(delta):
 			$TimerDetection.start()
 			show_label()
 			if Input.is_action_pressed("Intéraction") && peutInterargir == true && etatDialogue == false:
-				$CL_Tavernier/DialogueBoxTavernier.start("Tavernier")
+				$CanvasLayer/DialogueBoxPretre.start("Pretre")
 	if bodies.is_empty():
 		hide_label()
-		$CL_Tavernier/DialogueBoxTavernier.stop()
+		$CanvasLayer/DialogueBoxPretre.stop()
 	
 			
 	
@@ -39,8 +34,7 @@ func _ready():
 	nom_label = $Nom  # Assurez-vous que le nœud Label est correctement référencé dans la scène
 	nom_label.text = nomNPC
 	nom_label.visible = false  # Rend le label invisible au début
-	$CL_Tavernier/DialogueBoxTavernier.set_variable("prestige", TYPE_INT, Global.prestige)
-	$CL_Tavernier/DialogueBoxTavernier.set_variable("richesse", TYPE_INT, Global.richesse)
+	
 	
 	
 
@@ -51,20 +45,20 @@ func hide_label():
 	nom_label.visible = false
 
 	
-func _on_dialogue_box_tavernier_variable_changed(var_name, value):
+func _on_dialogue_box_dialogue_ended():
+	$CorpsNPC.dialogueArret()
+	etatDialogue = false
+
+
+func _on_dialogue_box_dialogue_started(id):
+	$CorpsNPC.dialogueLancer(id)
+	etatDialogue = true
+
+
+func _on_dialogue_box_pretre_variable_changed(var_name, value):
 	if var_name == "prestige":
 		Global.prestige = value
 	if var_name == "richesse":
 		Global.richesse = value
 	print("prestige ",Global.prestige)
 	print("richesse ",Global.richesse)
-
-
-func _on_dialogue_box_tavernier_dialogue_ended():
-	$CorpsNPC.dialogueArret()
-	etatDialogue = false
-
-
-func _on_dialogue_box_tavernier_dialogue_started(id):
-	$CorpsNPC.dialogueLancer(id)
-	etatDialogue = true

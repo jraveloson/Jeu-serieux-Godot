@@ -23,7 +23,7 @@ func _process(delta):
 		if bodie is CharacterBody2D:
 			show_label()
 			if Input.is_action_pressed("Intéraction"):
-				get_tree().change_scene_to_file("res://Scène/Taverne/taverne.tscn")
+				get_tree().change_scene_to_file("res://Scène/Amboise/Amboise.tscn")
 	if bodies.is_empty():
 		hide_label()
 

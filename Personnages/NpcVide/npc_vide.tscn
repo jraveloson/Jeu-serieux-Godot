@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b5p1e8ptxmvjk"]
 
-[ext_resource type="Script" path="res://Personnages/npcVide.gd" id="1_ap6c6"]
-[ext_resource type="Script" path="res://Personnages/CorpsNpc_Vide.gd" id="2_ener6"]
+[ext_resource type="Script" path="res://Personnages/pretre/pretre.gd" id="1_j6fa8"]
+[ext_resource type="Script" path="res://Personnages/pretre/CorpsPretre.gd" id="2_d1auw"]
 [ext_resource type="SpriteFrames" uid="uid://btps24o80hhxx" path="res://Personnages/tavernier/tavernierAnimation.tres" id="3_4sgnl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fp5oo"]
@@ -9,12 +9,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_rcmmc"]
 radius = 100.0
 
-[node name="femme" type="Area2D"]
-script = ExtResource("1_ap6c6")
+[node name="pretre" type="Area2D"]
+script = ExtResource("1_j6fa8")
 
 [node name="CorpsNPC" type="CharacterBody2D" parent="."]
 collision_layer = 4
-script = ExtResource("2_ener6")
+script = ExtResource("2_d1auw")
 
 [node name="TimerAnimation" type="Timer" parent="CorpsNPC"]
 
