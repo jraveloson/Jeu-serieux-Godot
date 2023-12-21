@@ -781,7 +781,7 @@ position = Vector2(1420, -20)
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("17_4nahh")
-nomObject = "Entrée du bar"
+nomObject = "Taverne"
 
 [node name="porte" type="CollisionShape2D" parent="ExtérieurBatiment/entréeTaverne"]
 position = Vector2(0.5, -4)
@@ -884,7 +884,7 @@ sample_portrait = null
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_4cpjo"), SubResource("RichTextEffect_8oxxc")])
 
 [node name="assaillant" parent="." instance=ExtResource("31_wcg8s")]
-position = Vector2(1089, -25)
+position = Vector2(1084, -14)
 
 [node name="CL_Assaillant" type="CanvasLayer" parent="assaillant"]
 

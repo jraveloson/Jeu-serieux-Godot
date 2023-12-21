@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Personnages/Marchand/Marchand.gd" id="1_ytjvu"]
 [ext_resource type="Script" path="res://Personnages/Marchand/CorpsMarchand.gd" id="2_hv0ey"]
-[ext_resource type="SpriteFrames" uid="uid://btps24o80hhxx" path="res://Personnages/tavernier/tavernierAnimation.tres" id="3_3ae7v"]
+[ext_resource type="SpriteFrames" uid="uid://tly173ys8sg" path="res://Personnages/Marchand/marchandAnimation.tres" id="3_vftd7"]
 [ext_resource type="LabelSettings" uid="uid://dnouf360rvrr0" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_CharacterLabel.tres" id="4_t821n"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_py43v"]
@@ -23,13 +23,14 @@ script = ExtResource("2_hv0ey")
 [node name="TimerAnimation" type="Timer" parent="CorpsNPC"]
 
 [node name="AnimationNPC" type="AnimatedSprite2D" parent="CorpsNPC"]
-sprite_frames = ExtResource("3_3ae7v")
-animation = &"walk"
+scale = Vector2(1.2, 1.35)
+sprite_frames = ExtResource("3_vftd7")
+animation = &"idle"
 autoplay = "idle"
 flip_h = true
 
 [node name="Hitbox" type="CollisionShape2D" parent="CorpsNPC"]
-position = Vector2(0, 8.5)
+position = Vector2(0, 5.5)
 shape = SubResource("CapsuleShape2D_py43v")
 
 [node name="TimerCorrectionAnimation" type="Timer" parent="CorpsNPC"]

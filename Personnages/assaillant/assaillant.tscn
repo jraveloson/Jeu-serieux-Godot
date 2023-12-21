@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Personnages/assaillant/assaillant.gd" id="1_vluel"]
 [ext_resource type="Script" path="res://Personnages/assaillant/CorpsAssaillant.gd" id="2_8soul"]
-[ext_resource type="SpriteFrames" uid="uid://pc6jys5kmskr" path="res://Personnages/notaire/notaireAnimation.tres" id="3_gnuk2"]
+[ext_resource type="SpriteFrames" uid="uid://bwxltoshgwwee" path="res://Personnages/assaillant/assaillantAnimation.tres" id="3_utbc2"]
 [ext_resource type="LabelSettings" uid="uid://dnouf360rvrr0" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_CharacterLabel.tres" id="4_cxjkw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mnfly"]
@@ -16,17 +16,18 @@ collision_mask = 2
 script = ExtResource("1_vluel")
 
 [node name="CorpsNPC" type="CharacterBody2D" parent="."]
+scale = Vector2(1.15, 1.3)
 collision_layer = 4
 script = ExtResource("2_8soul")
 
 [node name="TimerAnimation" type="Timer" parent="CorpsNPC"]
 
 [node name="AnimationNPC" type="AnimatedSprite2D" parent="CorpsNPC"]
-sprite_frames = ExtResource("3_gnuk2")
-animation = &"walk"
+sprite_frames = ExtResource("3_utbc2")
+animation = &"idle"
+frame_progress = 0.34358
 
 [node name="Hitbox" type="CollisionShape2D" parent="CorpsNPC"]
-position = Vector2(0, 6.5)
 shape = SubResource("CapsuleShape2D_mnfly")
 
 [node name="TimerCorrectionAnimation" type="Timer" parent="CorpsNPC"]
