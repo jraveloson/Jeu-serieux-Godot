@@ -123,3 +123,4 @@ pause={
 [rendering]
 
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.519531, 0.289063, 0.382813, 1)
