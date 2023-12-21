@@ -7,7 +7,8 @@ class_name UIManager
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$"ProgressBar".max_value = Global.tempsMax
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,6 +19,10 @@ func updateUI():
 	$"VBoxContainer/Gold Container/GoldLabel".text = str(Global.richesse)
 	$"VBoxContainer/Prestige Container/PrestigeLabel".text = str(Global.prestige)
 	updateHealth()
+	updateTime()
+	
+func updateTime():
+	$"ProgressBar".value = Global.tempsJeu
 
 func updateHealth():
 	match Global.vie:
