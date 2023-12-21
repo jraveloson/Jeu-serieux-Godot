@@ -1,0 +1,120 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://cjd1vw3poid65"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_7fylg"]
+
+[resource]
+script = ExtResource("1_7fylg")
+starts = {
+"Assaillant": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(73.1983, 84.0217),
+"start_id": "Assaillant"
+},
+"1_1": {
+"dialogue": "!!!
+Un individu mystérieux t'extorque",
+"offset": Vector2(380, 20),
+"options": {
+0: {
+"condition": {},
+"link": &"4_1",
+"text": "Lui tenir tête"
+},
+1: {
+"condition": {},
+"link": &"5_1",
+"text": "Lui céder ma bourse"
+}
+},
+"size": Vector2(300, 307),
+"speaker": ""
+},
+"1_2": {
+"dialogue": "Il t'a dérobé 25 écus.",
+"offset": Vector2(1940, 260),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300.001, 276),
+"speaker": ""
+},
+"1_3": {
+"dialogue": " Il t'a délesté de tout ce qu'il te restait.",
+"offset": Vector2(1600, 420),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300.001, 276),
+"speaker": ""
+},
+"1_4": {
+"dialogue": "Malheureusement, tu t'es blessé lors de la confrontation",
+"offset": Vector2(1240, 20),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300.001, 276),
+"speaker": ""
+},
+"4_1": {
+"link": &"1_4",
+"offset": Vector2(820, 160),
+"type": 2,
+"value": "1",
+"variable": "sante"
+},
+"4_2": {
+"link": &"1_2",
+"offset": Vector2(1240, 320),
+"type": 2,
+"value": "25",
+"variable": "richesse"
+},
+"4_3": {
+"link": &"1_3",
+"offset": Vector2(1240, 420),
+"type": 0,
+"value": "0",
+"variable": "richesse"
+},
+"5_1": {
+"false": &"4_3",
+"offset": Vector2(820, 280),
+"operator": 4,
+"true": &"4_2",
+"value1": "{{richesse}}",
+"value2": "25"
+}
+}
+variables = {
+"prestige": {
+"type": 2,
+"value": 0.0
+},
+"richesse": {
+"type": 2,
+"value": 0.0
+},
+"sante": {
+"type": 2,
+"value": 0.0
+}
+}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""
