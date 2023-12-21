@@ -25,7 +25,7 @@ nodes = {
 1: {
 "condition": {},
 "link": &"1_4",
-"text": "Non, mon père, cela ne va pas ^tre possible pour le moment"
+"text": "Non, mon père, cela ne va pas être possible pour le moment"
 }
 },
 "size": Vector2(300, 307),
