@@ -15,12 +15,21 @@ var idDialogue
 
 @warning_ignore("unused_parameter")
 func _process(delta):
+	$CL_Assaillant/DialogueBoxAssaillant.set_variable("prestige", TYPE_INT, Global.prestige)
+	$CL_Assaillant/DialogueBoxAssaillant.set_variable("richesse", TYPE_INT, Global.richesse)
+	$CL_Assaillant/DialogueBoxAssaillant.set_variable("vie", TYPE_INT, Global.vie)
 	if visibilite != true:
 		self.visible = false
 		Global.tempsRestantAssaillant = $TimerVisibilite.time_left
-		print($TimerVisibilite.time_left)
+		
 	else:
 		self.visible = true
+	if Global.resetTimerAssaillant == true:
+		$TimerVisibilite.stop()
+		self.visibilite = true
+		$TimerVisibilite.start()
+		Global.resetTimerAssaillant = false
+		
 	$Zone_Detection_Joueur.position.x = $CorpsNPC.position.x
 	$Nom.position.x = $CorpsNPC.position.x
 	$Nom.position.y = $CorpsNPC.position.y

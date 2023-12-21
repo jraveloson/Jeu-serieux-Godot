@@ -24,7 +24,7 @@ nodes = {
 },
 1: {
 "condition": {},
-"link": &"4_2",
+"link": &"5_2",
 "text": "Vendre des bijoux"
 }
 },
@@ -59,7 +59,7 @@ nodes = {
 },
 "1_4": {
 "dialogue": "La vente de vos bijoux vous a rapporté 25 écus.",
-"offset": Vector2(1540, 780),
+"offset": Vector2(2740, 740),
 "options": {
 0: {
 "condition": {},
@@ -101,9 +101,22 @@ nodes = {
 "size": Vector2(300.001, 276),
 "speaker": ""
 },
+"1_7": {
+"dialogue": "Vous n'avez pas assez de bijou",
+"offset": Vector2(1420, 880),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": ""
+},
 "2_1": {
 "comment": "Si on a le temps, on rajoute une condition pour que le joueur ne puisse pas vendre des bijoux à l'infini",
-"offset": Vector2(800, 760),
+"offset": Vector2(680, 740),
 "size": {
 "x": 200.0,
 "y": 122.0
@@ -118,7 +131,7 @@ nodes = {
 },
 "4_2": {
 "link": &"1_4",
-"offset": Vector2(1040, 700),
+"offset": Vector2(2320, 740),
 "type": 1,
 "value": "25",
 "variable": "richesse"
@@ -130,6 +143,13 @@ nodes = {
 "value": "100",
 "variable": "prestige"
 },
+"4_4": {
+"link": &"4_2",
+"offset": Vector2(1920, 740),
+"type": 2,
+"value": "1",
+"variable": "bijou"
+},
 "5_1": {
 "false": &"1_3",
 "offset": Vector2(1020, 460),
@@ -137,9 +157,21 @@ nodes = {
 "true": &"4_1",
 "value1": "{{richesse}}",
 "value2": "20"
+},
+"5_2": {
+"false": &"1_7",
+"offset": Vector2(1040, 760),
+"operator": 2,
+"true": &"4_4",
+"value1": "{{bijou}}",
+"value2": "0"
 }
 }
 variables = {
+"bijou": {
+"type": 4,
+"value": ""
+},
 "prestige": {
 "type": 2,
 "value": 200.0

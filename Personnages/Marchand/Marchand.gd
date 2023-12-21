@@ -13,6 +13,9 @@ var richesse
 
 @warning_ignore("unused_parameter")
 func _process(delta):
+	$CL_Marchand/DialogueBoxMarchand.set_variable("prestige", TYPE_INT, Global.prestige)
+	$CL_Marchand/DialogueBoxMarchand.set_variable("richesse", TYPE_INT, Global.richesse)
+	$CL_Marchand/DialogueBoxMarchand.set_variable("bijou", TYPE_INT, Global.Bijou)
 	$Zone_Detection_Joueur.position.x = $CorpsNPC.position.x
 	$Nom.position.x = $CorpsNPC.position.x
 	$Nom.position.y = $CorpsNPC.position.y
@@ -41,6 +44,7 @@ func _ready():
 	nom_label.visible = false  # Rend le label invisible au début
 	$CL_Marchand/DialogueBoxMarchand.set_variable("prestige", TYPE_INT, Global.prestige)
 	$CL_Marchand/DialogueBoxMarchand.set_variable("richesse", TYPE_INT, Global.richesse)
+	$CL_Marchand/DialogueBoxMarchand.set_variable("bijou", TYPE_INT, Global.Bijou)
 	
 	
 
@@ -64,5 +68,6 @@ func _on_dialogue_box_marchand_variable_changed(var_name, value):
 		Global.prestige = value
 	if var_name == "richesse":
 		Global.richesse = value
-	print("prestige ",Global.prestige)
-	print("richesse ",Global.richesse)
+	if var_name == "bijou":
+		Global.Bijou = value
+
