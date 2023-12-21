@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1rynhpriijc7"]
+
+[ext_resource type="Script" path="res://InterfaceUtilisateur/UserInterface/UI.gd" id="1_6jkti"]
+[ext_resource type="Texture2D" uid="uid://do0j3n5treopw" path="res://Assets/Icons/gold-coin-icon.png" id="1_bepr0"]
+[ext_resource type="LabelSettings" uid="uid://2x7fr3nglcd6" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_UIText.tres" id="2_eq1jx"]
+[ext_resource type="Texture2D" uid="uid://c3k10vjnc5bqb" path="res://Assets/Icons/crown-icon.png" id="4_h2nmq"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6jkti")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 98.0
+offset_bottom = 104.0
+
+[node name="Gold Container" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="GoldIcon" type="TextureRect" parent="VBoxContainer/Gold Container"]
+layout_mode = 2
+texture = ExtResource("1_bepr0")
+expand_mode = 2
+
+[node name="GoldLabel" type="Label" parent="VBoxContainer/Gold Container"]
+layout_mode = 2
+text = "40"
+label_settings = ExtResource("2_eq1jx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Prestige Container" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PrestigeIcon" type="TextureRect" parent="VBoxContainer/Prestige Container"]
+custom_minimum_size = Vector2(44, 34)
+layout_mode = 2
+texture = ExtResource("4_h2nmq")
+expand_mode = 2
+
+[node name="PrestigeLabel" type="Label" parent="VBoxContainer/Prestige Container"]
+layout_mode = 2
+text = "20"
+label_settings = ExtResource("2_eq1jx")

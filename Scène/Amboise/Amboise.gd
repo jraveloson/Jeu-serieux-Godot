@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var pause_manager : PauseManager
+@export var ui_manager : UIManager
 
 func _ready():
 	if Global.last_world_position != Vector2(0,0) && Global.recommencer != true:
@@ -10,7 +11,7 @@ func _ready():
 			$player.position = Vector2(0,0)
 			Global.recommencer = false
 			print("recommencer")
-
+	ui_manager.updateUI()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	#$tavernier/CL_Tavernier/DialogueBoxTavernier.set_variable("prestige", TYPE_INT, Global.prestige)

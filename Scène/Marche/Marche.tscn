@@ -1,16 +1,17 @@
-[gd_scene load_steps=31 format=3 uid="uid://q8c6jp3u0fwa"]
+[gd_scene load_steps=32 format=3 uid="uid://q8c6jp3u0fwa"]
 
 [ext_resource type="Texture2D" uid="uid://dulyov87ewjon" path="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png" id="1_f38rd"]
 [ext_resource type="Script" path="res://Scène/Marche/marche.gd" id="1_lo7jq"]
 [ext_resource type="PackedScene" uid="uid://0qliln2pnirn" path="res://InterfaceUtilisateur/PauseMenu/pausemenu.tscn" id="2_2oxj6"]
 [ext_resource type="Texture2D" uid="uid://bb84pa8dpyp6n" path="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/Buildings.png" id="2_xvgpr"]
 [ext_resource type="Texture2D" uid="uid://m0gyxydcf204" path="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/Y2lNiU-removebg-preview.png" id="3_l1x3u"]
+[ext_resource type="PackedScene" uid="uid://b1rynhpriijc7" path="res://InterfaceUtilisateur/UserInterface/UI.tscn" id="3_o0rvp"]
 [ext_resource type="Texture2D" uid="uid://d1j5da62rtbta" path="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/orange.png" id="4_t4oqj"]
 [ext_resource type="Texture2D" uid="uid://cxt5dkshh2h3f" path="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/orange (2).png" id="5_flbyl"]
 [ext_resource type="PackedScene" uid="uid://d1wmm1av4qdbk" path="res://Joueur/player.tscn" id="8_qyw8q"]
 [ext_resource type="Script" path="res://Scène/Marche/SortieMarche.gd" id="9_n4jcv"]
 [ext_resource type="LabelSettings" uid="uid://ba33t5yxedgnq" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_BuildingLabel.tres" id="10_ej42u"]
-[ext_resource type="PackedScene" uid="uid://bcp1pawud5b1p" path="res://Personnages/Marchand/marchand.tscn" id="11_ounnw"]
+[ext_resource type="PackedScene" path="res://Personnages/Marchand/marchand.tscn" id="11_ounnw"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="12_txrum"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="13_j3kiy"]
 [ext_resource type="Resource" uid="uid://q45ygghkvg38" path="res://Personnages/Marchand/dialogueMarchand.tres" id="13_vmvka"]
@@ -2751,13 +2752,16 @@ script = ExtResource("13_j3kiy")
 [sub_resource type="RichTextEffect" id="RichTextEffect_5mvie"]
 script = ExtResource("14_jfkla")
 
-[node name="Marche" type="Node2D" node_paths=PackedStringArray("pause_manager")]
+[node name="Marche" type="Node2D" node_paths=PackedStringArray("pause_manager", "ui_manager")]
 script = ExtResource("1_lo7jq")
 pause_manager = NodePath("CanvasLayer/pausemenu")
+ui_manager = NodePath("CanvasLayer/UI")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="pausemenu" parent="CanvasLayer" instance=ExtResource("2_2oxj6")]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("3_o0rvp")]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_xw506")
@@ -2790,7 +2794,8 @@ scale = Vector2(0.666667, 0.666667)
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1, 1)
+position = Vector2(-1, 0.99995)
+scale = Vector2(1, 1)
 zoom = Vector2(2.5, 2.5)
 limit_left = 32
 limit_top = -1410065408
@@ -2822,6 +2827,7 @@ nomNPC = "Marchand"
 [node name="CL_Marchand" type="CanvasLayer" parent="Marchand"]
 
 [node name="DialogueBoxMarchand" type="Panel" parent="Marchand/CL_Marchand"]
+visible = false
 custom_minimum_size = Vector2(256, 128)
 anchors_preset = 12
 anchor_top = 1.0
