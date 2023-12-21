@@ -2,9 +2,8 @@ extends Node
 
 var last_world_position = Vector2(0, 0)
 var recommencer : bool = false
-var scene_list = []
-#Scene
-
+var visibiliteAssaillant : bool
+var tempsRestantAssaillant : float 
 
 var prestige = 0
 var richesse = 30

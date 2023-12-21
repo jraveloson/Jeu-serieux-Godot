@@ -1,21 +1,21 @@
 [gd_scene load_steps=7 format=3 uid="uid://djxdtt3vjs136"]
 
 [ext_resource type="Script" path="res://Personnages/notaire/notaire.gd" id="1_kxcwa"]
-[ext_resource type="Script" path="res://CorpsNotaire.gd" id="2_8hwkk"]
+[ext_resource type="Script" path="res://Personnages/notaire/CorpsNotaire.gd" id="2_d0jrq"]
 [ext_resource type="SpriteFrames" uid="uid://pc6jys5kmskr" path="res://Personnages/notaire/notaireAnimation.tres" id="3_ac0mb"]
 [ext_resource type="LabelSettings" uid="uid://dnouf360rvrr0" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_CharacterLabel.tres" id="4_uj58c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_00w7o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ouexn"]
-radius = 100.0
+radius = 50.0
 
 [node name="notaire" type="Area2D"]
 script = ExtResource("1_kxcwa")
 
 [node name="CorpsNPC" type="CharacterBody2D" parent="."]
 collision_layer = 4
-script = ExtResource("2_8hwkk")
+script = ExtResource("2_d0jrq")
 
 [node name="TimerAnimation" type="Timer" parent="CorpsNPC"]
 

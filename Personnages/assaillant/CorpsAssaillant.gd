@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var idDialogue = "Assaillant"
 
 
 enum {
@@ -8,7 +9,7 @@ enum {
 	idle
 }
 
-@export var vitesseDeplacement = 15
+@export var vitesseDeplacement = 45 
 @onready var animated_sprite2 : AnimatedSprite2D = $AnimationNPC
 @export var currentState = idle
 @export var dialogueActiver = false
@@ -16,6 +17,7 @@ enum {
 var dir = Vector2.RIGHT
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var last_position_x : float = 0
+
 
 
 func _ready():
@@ -33,6 +35,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func _process(delta):
+	
 	
 	#Déplacement
 	if is_on_floor() && dialogueActiver == false :
@@ -65,12 +68,14 @@ func choose(array):
 	return array.front()
 	
 func dialogueLancer(id):
-	if id == "Tavernier":
+	if id == idDialogue:
 		dialogueActiver = true
+	
 
 
 func dialogueArret():
 	dialogueActiver = false
+	
 
 
 func _on_timer_correction_animation_timeout():

@@ -51,8 +51,6 @@ func _on_dialogue_box_pretre_variable_changed(var_name, value):
 		Global.prestige = value
 	if var_name == "richesse":
 		Global.richesse = value
-	print("prestige ",Global.prestige)
-	print("richesse ",Global.richesse)
 
 
 func _on_dialogue_box_pretre_dialogue_ended():
