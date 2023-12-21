@@ -6,11 +6,9 @@ extends Node2D
 func _ready():
 	if Global.last_world_position != Vector2(0,0) && Global.recommencer != true:
 		$player.position = Global.last_world_position
-		print($player.position)
 		if Global.recommencer:
 			$player.position = Vector2(0,0)
 			Global.recommencer = false
-			print("recommencer")
 	ui_manager.updateUI()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

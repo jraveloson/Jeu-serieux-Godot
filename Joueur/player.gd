@@ -161,4 +161,7 @@ func _on_dialogue_box_assaillant_dialogue_started(id):
 func _on_timer_progression_jeu_timeout():
 	Global.secondes -= 1 
 	$TimerProgressionJeu.start()
-	print(Global.tempsJeu)
+
+
+func _on_timer_bijou_timeout():
+	Global.nombreBijou += 1
