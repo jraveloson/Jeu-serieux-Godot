@@ -802,7 +802,7 @@ offset_bottom = 23.0
 label_settings = ExtResource("18_tfjsi")
 
 [node name="femme" parent="." instance=ExtResource("20_sieng")]
-position = Vector2(1091, -24)
+position = Vector2(1177, -26)
 nomNPC = "Susane"
 
 [node name="CL_femme" type="CanvasLayer" parent="femme"]
