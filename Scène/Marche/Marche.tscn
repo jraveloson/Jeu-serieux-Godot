@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://q8c6jp3u0fwa"]
+[gd_scene load_steps=33 format=3 uid="uid://q8c6jp3u0fwa"]
 
 [ext_resource type="Texture2D" uid="uid://dulyov87ewjon" path="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png" id="1_f38rd"]
 [ext_resource type="Script" path="res://Scène/Marche/marche.gd" id="1_lo7jq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bb84pa8dpyp6n" path="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/Buildings.png" id="2_xvgpr"]
 [ext_resource type="Texture2D" uid="uid://m0gyxydcf204" path="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/Y2lNiU-removebg-preview.png" id="3_l1x3u"]
 [ext_resource type="PackedScene" uid="uid://b1rynhpriijc7" path="res://InterfaceUtilisateur/UserInterface/UI.tscn" id="3_o0rvp"]
+[ext_resource type="PackedScene" uid="uid://cnbftu8sfqg3g" path="res://InterfaceUtilisateur/OptionMenu/optionsmenu.tscn" id="4_ry72x"]
 [ext_resource type="Texture2D" uid="uid://d1j5da62rtbta" path="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/orange.png" id="4_t4oqj"]
 [ext_resource type="Texture2D" uid="uid://cxt5dkshh2h3f" path="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/orange (2).png" id="5_flbyl"]
 [ext_resource type="PackedScene" uid="uid://d1wmm1av4qdbk" path="res://Joueur/player.tscn" id="8_qyw8q"]
@@ -2759,9 +2760,13 @@ ui_manager = NodePath("CanvasLayer/UI")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="pausemenu" parent="CanvasLayer" instance=ExtResource("2_2oxj6")]
+[node name="pausemenu" parent="CanvasLayer" node_paths=PackedStringArray("option_menu") instance=ExtResource("2_2oxj6")]
+option_menu = NodePath("../optionsmenu")
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("3_o0rvp")]
+
+[node name="optionsmenu" parent="CanvasLayer" node_paths=PackedStringArray("caller") instance=ExtResource("4_ry72x")]
+caller = NodePath("../pausemenu")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_xw506")
