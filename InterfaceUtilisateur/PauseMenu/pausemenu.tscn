@@ -113,4 +113,5 @@ vertical_alignment = 1
 
 [connection signal="pressed" from="Panel/VBoxContainer/Continuer" to="." method="_on_continuer_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Recommencer" to="." method="_on_recommencer_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Option" to="." method="_on_option_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]

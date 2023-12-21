@@ -2,6 +2,8 @@ extends Control
 
 class_name PauseManager
 
+@export var option_menu : OptionMenu
+
 var game_paused : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,3 +30,10 @@ func _on_recommencer_pressed():
 	#Trouver un moyen de relancer la partie 
 	#get_tree().change_scene_to_file("res://Scène/Amboise.tscn")
 	get_tree().reload_current_scene()
+
+func _on_option_pressed():
+	option_menu.show()
+	hide()
+
+func on_option_menu_close():
+	show()
