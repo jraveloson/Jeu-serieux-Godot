@@ -13,8 +13,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1773.0
-offset_bottom = -961.0
+offset_right = -1756.0
+offset_bottom = -868.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6jkti")
@@ -84,13 +84,13 @@ expand_mode = 2
 [node name="Timer Container" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Timer Container"]
+[node name="TimerIcon" type="TextureRect" parent="VBoxContainer/Timer Container"]
 custom_minimum_size = Vector2(44, 44)
 layout_mode = 2
 texture = ExtResource("7_wwool")
 expand_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/Timer Container"]
+[node name="TimerLabel" type="Label" parent="VBoxContainer/Timer Container"]
 layout_mode = 2
 label_settings = ExtResource("2_eq1jx")
 horizontal_alignment = 1
