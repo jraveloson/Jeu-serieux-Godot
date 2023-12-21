@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://w1xgakiftst6"]
+
+[ext_resource type="LabelSettings" uid="uid://b8q2m54r7w8b5" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_TitleScreen_Buttons.tres" id="1_nalgk"]
+
+[node name="BoutonMenu" type="Button"]
+flat = true
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Label"
+label_settings = ExtResource("1_nalgk")

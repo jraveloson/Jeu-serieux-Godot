@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://b8q2m54r7w8b5"]
+
+[ext_resource type="FontFile" uid="uid://c7do45hjxhcmv" path="res://InterfaceUtilisateur/ressources UI/Fonts/DungeonFont.ttf" id="1_ke8ql"]
+
+[resource]
+font = ExtResource("1_ke8ql")
+font_size = 50

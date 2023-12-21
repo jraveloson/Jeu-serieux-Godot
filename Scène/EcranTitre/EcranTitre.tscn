@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://cbnq3ba0bysoh"]
+
+[ext_resource type="Script" path="res://Scène/EcranTitre/EcranTitre.gd" id="1_d6dxk"]
+[ext_resource type="Texture2D" uid="uid://mbskbhuj1kp5" path="res://GothicVania-town-files/GothicVania-town-files/code/phaser-code/assets/environment/background.png" id="1_opvty"]
+[ext_resource type="PackedScene" uid="uid://cnbftu8sfqg3g" path="res://InterfaceUtilisateur/OptionMenu/optionsmenu.tscn" id="2_p2adn"]
+[ext_resource type="Texture2D" uid="uid://cbgkl8extd2sr" path="res://GothicVania-town-files/GothicVania-town-files/code/phaser-code/assets/environment/middleground.png" id="2_xkebc"]
+[ext_resource type="LabelSettings" uid="uid://dwf01iydhwctk" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_TitleScreen_Text.tres" id="3_4e8fn"]
+[ext_resource type="PackedScene" uid="uid://qavaq5q080f5" path="res://Scène/EcranTitre/Boutons/bouton_jouer.tscn" id="4_nbkkc"]
+[ext_resource type="PackedScene" uid="uid://bilcm26crmjaf" path="res://Scène/EcranTitre/Boutons/bouton_options.tscn" id="5_l875e"]
+[ext_resource type="Script" path="res://Scène/EcranTitre/Boutons/bouton_jouer.gd" id="5_q5k3q"]
+[ext_resource type="PackedScene" uid="uid://vndc7xdatsy2" path="res://Scène/EcranTitre/Boutons/bouton_quitter.tscn" id="6_v7pdr"]
+[ext_resource type="LabelSettings" uid="uid://16ewlysa8pcx" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_TitleScreen_Authors.tres" id="7_bvjyi"]
+
+[node name="TitleScreen" type="Control" node_paths=PackedStringArray("option_menu")]
+layout_mode = 3
+anchor_right = 1.7
+anchor_bottom = 1.7
+offset_right = -806.4
+offset_bottom = -453.6
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.7, 1.7)
+script = ExtResource("1_d6dxk")
+option_menu = NodePath("CanvasLayer/optionsmenu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(566.838, 318.765)
+scale = Vector2(2.93926, 2.18587)
+texture = ExtResource("1_opvty")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(566.838, 319.941)
+scale = Vector2(2.93926, 2.19404)
+texture = ExtResource("2_xkebc")
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 52.3529
+offset_top = 67.6471
+offset_right = 1075.35
+offset_bottom = 585.647
+
+[node name="Titre" type="Label" parent="Menu"]
+layout_mode = 2
+text = "Les voies de la noblesse"
+label_settings = ExtResource("3_4e8fn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Boutons" type="VBoxContainer" parent="Menu"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="BoutonJouer" parent="Menu/Boutons" instance=ExtResource("4_nbkkc")]
+layout_mode = 2
+script = ExtResource("5_q5k3q")
+
+[node name="BoutonOptions" parent="Menu/Boutons" instance=ExtResource("5_l875e")]
+layout_mode = 2
+
+[node name="BoutonQuitter" parent="Menu/Boutons" instance=ExtResource("6_v7pdr")]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+
+[node name="Noms" type="Label" parent="Menu"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Gwenole Allal - Adrien Akgul - Joanna Raveloson - Mathilde Guillemain "
+label_settings = ExtResource("7_bvjyi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="optionsmenu" parent="CanvasLayer" node_paths=PackedStringArray("caller") instance=ExtResource("2_p2adn")]
+caller = NodePath("../..")
+
+[connection signal="pressed" from="Menu/Boutons/BoutonJouer" to="Menu/Boutons/BoutonJouer" method="_on_pressed"]
+[connection signal="pressed" from="Menu/Boutons/BoutonOptions" to="." method="_on_bouton_options_pressed"]
+[connection signal="pressed" from="Menu/Boutons/BoutonQuitter" to="." method="_on_bouton_quitter_pressed"]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://qavaq5q080f5"]
+
+[ext_resource type="PackedScene" uid="uid://w1xgakiftst6" path="res://Scène/EcranTitre/Boutons/BoutonMenu.tscn" id="1_0imh1"]
+
+[node name="BoutonJouer" instance=ExtResource("1_0imh1")]
+custom_minimum_size = Vector2(150, 50)
+
+[node name="Label" parent="." index="0"]
+text = "Jouer"

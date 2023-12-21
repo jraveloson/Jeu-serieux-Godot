@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://vndc7xdatsy2"]
+
+[ext_resource type="PackedScene" uid="uid://w1xgakiftst6" path="res://Scène/EcranTitre/Boutons/BoutonMenu.tscn" id="1_vxrlq"]
+
+[node name="BoutonQuitter" instance=ExtResource("1_vxrlq")]
+
+[node name="Label" parent="." index="0"]
+text = "Quitter"
