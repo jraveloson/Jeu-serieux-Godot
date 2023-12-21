@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://q42od8yd1v2u"]
+[gd_scene load_steps=44 format=3 uid="uid://q42od8yd1v2u"]
 
 [ext_resource type="Texture2D" uid="uid://ba17dym30cpdu" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/background.png" id="1_2jr5k"]
 [ext_resource type="Script" path="res://Scène/Taverne/taverne.gd" id="1_r5uea"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://0qliln2pnirn" path="res://InterfaceUtilisateur/PauseMenu/pausemenu.tscn" id="2_l5pev"]
 [ext_resource type="Texture2D" uid="uid://vv1d15m5ukfg" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/middleground.png" id="2_mwhdp"]
 [ext_resource type="Texture2D" uid="uid://4r63u7uka41d" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/sliced-tileset/ground-wall.png" id="3_78x4o"]
+[ext_resource type="PackedScene" uid="uid://cnbftu8sfqg3g" path="res://InterfaceUtilisateur/OptionMenu/optionsmenu.tscn" id="4_bfwyr"]
 [ext_resource type="Texture2D" uid="uid://cawata2w2fpf4" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/sliced-tileset/ground.png" id="4_vwmrb"]
 [ext_resource type="Texture2D" uid="uid://du5vcv2ll1ha7" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/environment-preview.png" id="5_rpa7l"]
 [ext_resource type="Texture2D" uid="uid://b0dt4njcqbe6i" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/sliced-tileset/window-bars.png" id="6_f5ecw"]
@@ -11710,7 +11711,11 @@ ui_manager = NodePath("CanvasLayer/UI")
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("2_2noja")]
 
-[node name="pausemenu" parent="CanvasLayer" instance=ExtResource("2_l5pev")]
+[node name="pausemenu" parent="CanvasLayer" node_paths=PackedStringArray("option_menu") instance=ExtResource("2_l5pev")]
+option_menu = NodePath("../optionsmenu")
+
+[node name="optionsmenu" parent="CanvasLayer" node_paths=PackedStringArray("caller") instance=ExtResource("4_bfwyr")]
+caller = NodePath("../pausemenu")
 
 [node name="Arrière_plan" type="ParallaxBackground" parent="."]
 offset = Vector2(0, -237)
