@@ -1,0 +1,95 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://dw6qxftjd4dys"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_1nav1"]
+
+[resource]
+script = ExtResource("1_1nav1")
+starts = {
+"Notaire": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(66, 74),
+"start_id": "Notaire"
+},
+"1_1": {
+"dialogue": "Acheter un titre de Noblesse (100 écus)",
+"offset": Vector2(360, 20),
+"options": {
+0: {
+"condition": {},
+"link": &"5_1",
+"text": "Oui"
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Non, trouver une autre solution"
+}
+},
+"size": Vector2(300, 307),
+"speaker": ""
+},
+"1_2": {
+"dialogue": "Tu es maintenant anobli. Tu as gagné.",
+"offset": Vector2(1880, 0),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": ""
+},
+"1_3": {
+"dialogue": "Tu n'as pas assez d'argent pour t'acheter un titre de Noblesse",
+"offset": Vector2(1120, 200),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": ""
+},
+"4_1": {
+"link": &"4_2",
+"offset": Vector2(1120, 80),
+"type": 2,
+"value": "100",
+"variable": "richesse"
+},
+"4_2": {
+"link": &"1_2",
+"offset": Vector2(1480, 60),
+"type": 0,
+"value": "1000",
+"variable": "prestige"
+},
+"5_1": {
+"false": &"1_3",
+"offset": Vector2(720, 100),
+"operator": 4,
+"true": &"4_1",
+"value1": "{{richesse}}",
+"value2": "100"
+}
+}
+variables = {
+"prestige": {
+"type": 2,
+"value": 0.0
+},
+"richesse": {
+"type": 2,
+"value": 0.0
+}
+}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcp1pawud5b1p"]
+[gd_scene load_steps=7 format=3 uid="uid://dl2w1j8f1ts13"]
 
 [ext_resource type="Script" path="res://Personnages/Marchand/Marchand.gd" id="1_ytjvu"]
 [ext_resource type="Script" path="res://Personnages/Marchand/CorpsMarchand.gd" id="2_hv0ey"]
