@@ -18,18 +18,7 @@ func _process(_delta):
 	pass
 
 
-# ---- Handling Pause Menu ----
-
-# Signal de mise en "pause du jeu"
-
-
-var game_paused : bool = false : 
-	get : 
-		return game_paused
-	set(value):
-		game_paused = value
-		emit_signal("toggle_game_paused", game_paused)
-
+# ---- Handling Pause Menu ---- #
 func _input(event : InputEvent):
 	if (event.is_action_pressed("pause")):
 		pause_manager._on_scene_toggle_game_pause()
