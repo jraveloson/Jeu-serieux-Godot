@@ -81,7 +81,6 @@ caller = NodePath("../..")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(566, 318)
-zoom = Vector2(1.2, 1.2)
 
 [connection signal="pressed" from="Menu/Boutons/BoutonJouer" to="Menu/Boutons/BoutonJouer" method="_on_pressed"]
 [connection signal="pressed" from="Menu/Boutons/BoutonOptions" to="." method="_on_bouton_options_pressed"]
