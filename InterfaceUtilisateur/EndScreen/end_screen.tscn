@@ -1,0 +1,120 @@
+[gd_scene load_steps=5 format=3 uid="uid://dax5kh61mc1yx"]
+
+[ext_resource type="Script" path="res://InterfaceUtilisateur/EndScreen/end_screen.gd" id="1_68c6u"]
+[ext_resource type="LabelSettings" uid="uid://d0e6dx24tt0kw" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_MenuTitle.tres" id="1_rvtla"]
+[ext_resource type="LabelSettings" uid="uid://cpy7nxv1xhedi" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_MenuOptions.tres" id="3_g0135"]
+[ext_resource type="LabelSettings" uid="uid://5tuqh10xk411" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_MenuOptionsTitle.tres" id="4_gaopt"]
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_68c6u")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(900, 700)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -291.0
+offset_top = -180.5
+offset_right = 291.0
+offset_bottom = 180.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Fin"
+label_settings = ExtResource("1_rvtla")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="endStateLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+label_settings = ExtResource("3_g0135")
+
+[node name="endCondition" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+label_settings = ExtResource("3_g0135")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="restartButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="restartLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer/restartButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Recommencer"
+label_settings = ExtResource("4_gaopt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="menuButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="menuLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer/menuButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Ecran titre"
+label_settings = ExtResource("4_gaopt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="quitButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="quitLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer/quitButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quitter"
+label_settings = ExtResource("4_gaopt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/VBoxContainer/restartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/VBoxContainer/menuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/VBoxContainer/quitButton" to="." method="_on_quit_button_pressed"]
