@@ -859,6 +859,7 @@ collision_mask = 2
 [node name="CL_Notaire" type="CanvasLayer" parent="notaire"]
 
 [node name="DialogueBoxNotaire" type="Panel" parent="notaire/CL_Notaire"]
+visible = false
 custom_minimum_size = Vector2(256, 128)
 anchors_preset = 12
 anchor_top = 1.0
