@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1rynhpriijc7"]
+[gd_scene load_steps=8 format=3 uid="uid://b1rynhpriijc7"]
 
 [ext_resource type="Script" path="res://InterfaceUtilisateur/UserInterface/UI.gd" id="1_6jkti"]
 [ext_resource type="Texture2D" uid="uid://do0j3n5treopw" path="res://Assets/Icons/gold-coin-icon.png" id="1_bepr0"]
@@ -6,14 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://crl1vxp2tbkka" path="res://Assets/Icons/heart-empty-icon.png" id="3_5b1j4"]
 [ext_resource type="Texture2D" uid="uid://c3k10vjnc5bqb" path="res://Assets/Icons/crown-icon.png" id="4_h2nmq"]
 [ext_resource type="Texture2D" uid="uid://c6injb8cliifm" path="res://Assets/Icons/heart-icon.png" id="5_gnwog"]
+[ext_resource type="Texture2D" uid="uid://cj82bl1gboagg" path="res://Assets/Icons/hourglass-icon.png" id="7_wwool"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1773.0
-offset_bottom = -961.0
+offset_right = -1756.0
+offset_bottom = -868.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6jkti")
@@ -79,3 +80,18 @@ custom_minimum_size = Vector2(44, 44)
 layout_mode = 2
 texture = ExtResource("5_gnwog")
 expand_mode = 2
+
+[node name="Timer Container" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TimerIcon" type="TextureRect" parent="VBoxContainer/Timer Container"]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+texture = ExtResource("7_wwool")
+expand_mode = 2
+
+[node name="TimerLabel" type="Label" parent="VBoxContainer/Timer Container"]
+layout_mode = 2
+label_settings = ExtResource("2_eq1jx")
+horizontal_alignment = 1
+vertical_alignment = 1
