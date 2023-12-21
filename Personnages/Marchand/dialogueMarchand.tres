@@ -4,9 +4,151 @@
 
 [resource]
 script = ExtResource("1_xhivv")
-starts = {}
-nodes = {}
-variables = {}
-comments = Array[String]([])
+starts = {
+"Marchand": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(411.495, 406.088),
+"start_id": "Marchand"
+},
+"1_1": {
+"dialogue": "Bienvenue, cher visiteur. Que puis-je faire pour vous aujourd'hui ?",
+"offset": Vector2(680, 380),
+"options": {
+0: {
+"condition": {},
+"link": &"5_1",
+"text": "Acheter des épices rares"
+},
+1: {
+"condition": {},
+"link": &"4_2",
+"text": "Vendre des bijoux"
+}
+},
+"size": Vector2(300, 307),
+"speaker": "Marchand"
+},
+"1_2": {
+"dialogue": "La transaction s'élève à 20 écus.",
+"offset": Vector2(1740, 280),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": ""
+}
+},
+"size": Vector2(300.002, 276),
+"speaker": ""
+},
+"1_3": {
+"dialogue": "Tu n'as pas assez d'argent pour acheter des épices rares",
+"offset": Vector2(1380, 480),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300.001, 276),
+"speaker": ""
+},
+"1_4": {
+"dialogue": "La vente de vos bijoux vous a rapporté 25 écus.",
+"offset": Vector2(1540, 780),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300.001, 276),
+"speaker": ""
+},
+"1_5": {
+"dialogue": "Offrir les épices rares au Noble ?",
+"offset": Vector2(2220, 280),
+"options": {
+0: {
+"condition": {},
+"link": &"4_3",
+"text": "Oui"
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Non"
+}
+},
+"size": Vector2(300, 307),
+"speaker": ""
+},
+"1_6": {
+"dialogue": "Bravo, votra réputation a gagné en éclat",
+"offset": Vector2(3040, 340),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300.001, 276),
+"speaker": ""
+},
+"2_1": {
+"comment": "Si on a le temps, on rajoute une condition pour que le joueur ne puisse pas vendre des bijoux à l'infini",
+"offset": Vector2(800, 760),
+"size": {
+"x": 200.0,
+"y": 122.0
+}
+},
+"4_1": {
+"link": &"1_2",
+"offset": Vector2(1380, 360),
+"type": 2,
+"value": "20",
+"variable": "richesse"
+},
+"4_2": {
+"link": &"1_4",
+"offset": Vector2(1040, 700),
+"type": 1,
+"value": "25",
+"variable": "richesse"
+},
+"4_3": {
+"link": &"1_6",
+"offset": Vector2(2640, 420),
+"type": 1,
+"value": "100",
+"variable": "prestige"
+},
+"5_1": {
+"false": &"1_3",
+"offset": Vector2(1020, 460),
+"operator": 4,
+"true": &"4_1",
+"value1": "{{richesse}}",
+"value2": "20"
+}
+}
+variables = {
+"prestige": {
+"type": 2,
+"value": 200.0
+},
+"richesse": {
+"type": 2,
+"value": 10.0
+}
+}
+comments = Array[String](["2_1"])
 strays = Array[String]([])
 characters = ""
