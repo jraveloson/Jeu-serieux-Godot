@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Personnages/notaire/notaire.gd" id="1_kxcwa"]
 [ext_resource type="Script" path="res://CorpsNotaire.gd" id="2_8hwkk"]
-[ext_resource type="SpriteFrames" uid="uid://dxaiatknluog" path="res://Personnages/femme/femmeAnimation.tres" id="3_6ihab"]
+[ext_resource type="SpriteFrames" uid="uid://pc6jys5kmskr" path="res://Personnages/notaire/notaireAnimation.tres" id="3_ac0mb"]
 [ext_resource type="LabelSettings" uid="uid://dnouf360rvrr0" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_CharacterLabel.tres" id="4_uj58c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_00w7o"]
@@ -20,12 +20,11 @@ script = ExtResource("2_8hwkk")
 [node name="TimerAnimation" type="Timer" parent="CorpsNPC"]
 
 [node name="AnimationNPC" type="AnimatedSprite2D" parent="CorpsNPC"]
-sprite_frames = ExtResource("3_6ihab")
+sprite_frames = ExtResource("3_ac0mb")
 animation = &"walk"
-frame_progress = 0.238993
 
 [node name="Hitbox" type="CollisionShape2D" parent="CorpsNPC"]
-position = Vector2(0, 8.5)
+position = Vector2(0, 6.5)
 shape = SubResource("CapsuleShape2D_00w7o")
 
 [node name="TimerCorrectionAnimation" type="Timer" parent="CorpsNPC"]
