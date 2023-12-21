@@ -9,7 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	pass
+	updateUI()
 
 func updateUI():
 	$"VBoxContainer/Gold Container/GoldLabel".text = str(Global.richesse)

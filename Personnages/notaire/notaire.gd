@@ -24,10 +24,10 @@ func _process(delta):
 			$TimerDetection.start()
 			show_label()
 			if Input.is_action_pressed("Intéraction") && peutInterargir == true && etatDialogue == false:
-				$CL_Marchand/DialogueBoxMarchand.start("Marchand")
+				$CL_Notaire/DialogueBoxNotaire.start("Notaire")
 	if bodies.is_empty():
 		hide_label()
-		$CL_Marchand/DialogueBoxMarchand.stop()
+		$CL_Notaire/DialogueBoxNotaire.stop()
 	
 			
 	
@@ -39,8 +39,8 @@ func _ready():
 	nom_label = $Nom  # Assurez-vous que le nœud Label est correctement référencé dans la scène
 	nom_label.text = nomNPC
 	nom_label.visible = false  # Rend le label invisible au début
-	$CL_Marchand/DialogueBoxMarchand.set_variable("prestige", TYPE_INT, Global.prestige)
-	$CL_Marchand/DialogueBoxMarchand.set_variable("richesse", TYPE_INT, Global.richesse)
+	$CL_Notaire/DialogueBoxNotaire.set_variable("prestige", TYPE_INT, Global.prestige)
+	$CL_Notaire/DialogueBoxNotaire.set_variable("richesse", TYPE_INT, Global.richesse)
 	
 	
 
@@ -51,15 +51,17 @@ func hide_label():
 	nom_label.visible = false
 
 
-func _on_dialogue_box_marchand_dialogue_ended():
+func _on_dialogue_box_notaire_dialogue_ended():
+	$CorpsNPC.dialogueArret()
 	etatDialogue = false
 
 
-func _on_dialogue_box_marchand_dialogue_started(_id):
+func _on_dialogue_box_notaire_dialogue_started(id):
+	$CorpsNPC.dialogueLancer(id)
 	etatDialogue = true
 
 
-func _on_dialogue_box_marchand_variable_changed(var_name, value):
+func _on_dialogue_box_notaire_variable_changed(var_name, value):
 	if var_name == "prestige":
 		Global.prestige = value
 	if var_name == "richesse":

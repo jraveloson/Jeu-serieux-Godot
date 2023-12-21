@@ -1,47 +1,44 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8tjywkq6x563"]
+[gd_scene load_steps=7 format=3 uid="uid://djxdtt3vjs136"]
 
-[ext_resource type="Script" path="res://Personnages/femme/femme.gd" id="1_uitit"]
-[ext_resource type="Script" path="res://Personnages/femme/CorpsFemme.gd" id="2_i3e86"]
-[ext_resource type="SpriteFrames" uid="uid://dxaiatknluog" path="res://Personnages/femme/femmeAnimation.tres" id="2_oogat"]
-[ext_resource type="LabelSettings" uid="uid://dnouf360rvrr0" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_CharacterLabel.tres" id="4_sxvhd"]
+[ext_resource type="Script" path="res://Personnages/notaire/notaire.gd" id="1_kxcwa"]
+[ext_resource type="Script" path="res://CorpsNotaire.gd" id="2_8hwkk"]
+[ext_resource type="SpriteFrames" uid="uid://dxaiatknluog" path="res://Personnages/femme/femmeAnimation.tres" id="3_6ihab"]
+[ext_resource type="LabelSettings" uid="uid://dnouf360rvrr0" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_CharacterLabel.tres" id="4_uj58c"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ae17x"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_00w7o"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_efm2m"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_ouexn"]
 radius = 100.0
 
-[node name="femme" type="Area2D"]
-collision_layer = 4
-collision_mask = 2
-script = ExtResource("1_uitit")
-nomNPC = "femme"
+[node name="notaire" type="Area2D"]
+script = ExtResource("1_kxcwa")
 
 [node name="CorpsNPC" type="CharacterBody2D" parent="."]
 collision_layer = 4
-script = ExtResource("2_i3e86")
+script = ExtResource("2_8hwkk")
 
 [node name="TimerAnimation" type="Timer" parent="CorpsNPC"]
 
 [node name="AnimationNPC" type="AnimatedSprite2D" parent="CorpsNPC"]
-sprite_frames = ExtResource("2_oogat")
+sprite_frames = ExtResource("3_6ihab")
 animation = &"walk"
 frame_progress = 0.238993
 
 [node name="Hitbox" type="CollisionShape2D" parent="CorpsNPC"]
 position = Vector2(0, 8.5)
-shape = SubResource("CapsuleShape2D_ae17x")
+shape = SubResource("CapsuleShape2D_00w7o")
 
 [node name="TimerCorrectionAnimation" type="Timer" parent="CorpsNPC"]
 
 [node name="Zone_Detection_Joueur" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_efm2m")
+shape = SubResource("CircleShape2D_ouexn")
 
 [node name="Nom" type="Label" parent="."]
 offset_left = -20.0
 offset_top = -41.0
 offset_right = 20.0
 offset_bottom = -18.0
-label_settings = ExtResource("4_sxvhd")
+label_settings = ExtResource("4_uj58c")
 horizontal_alignment = 1
 vertical_alignment = 1
 

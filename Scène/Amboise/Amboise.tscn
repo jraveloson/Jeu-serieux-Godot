@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dakl0x4wmagel"]
+[gd_scene load_steps=52 format=3 uid="uid://dakl0x4wmagel"]
 
 [ext_resource type="Script" path="res://Scène/Amboise/Amboise.gd" id="1_fr0hd"]
 [ext_resource type="PackedScene" uid="uid://0qliln2pnirn" path="res://InterfaceUtilisateur/PauseMenu/pausemenu.tscn" id="2_hudwo"]
@@ -28,7 +28,8 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="23_ndj3f"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="24_jtw67"]
 [ext_resource type="PackedScene" uid="uid://d1wmm1av4qdbk" path="res://Joueur/player.tscn" id="25_htlx1"]
-[ext_resource type="PackedScene" uid="uid://b5p1e8ptxmvjk" path="res://Personnages/NpcVide/npc_vide.tscn" id="26_8wdkl"]
+[ext_resource type="PackedScene" uid="uid://djxdtt3vjs136" path="res://notaire.tscn" id="29_w0b0h"]
+[ext_resource type="Resource" uid="uid://dw6qxftjd4dys" path="res://Personnages/notaire/dialogueNotaire.tres" id="30_orr2w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ychi"]
 texture = ExtResource("5_hxbfj")
@@ -665,6 +666,12 @@ script = ExtResource("23_ndj3f")
 [sub_resource type="RichTextEffect" id="RichTextEffect_xnerk"]
 script = ExtResource("24_jtw67")
 
+[sub_resource type="RichTextEffect" id="RichTextEffect_4cpjo"]
+script = ExtResource("23_ndj3f")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_8oxxc"]
+script = ExtResource("24_jtw67")
+
 [node name="Amboise" type="Node2D" node_paths=PackedStringArray("pause_manager", "ui_manager")]
 script = ExtResource("1_fr0hd")
 pause_manager = NodePath("CanvasLayer/pausemenu")
@@ -844,13 +851,35 @@ zoom = Vector2(2, 2)
 limit_left = 218
 limit_right = 1753
 
-[node name="npcVide" parent="." instance=ExtResource("26_8wdkl")]
-visible = false
-position = Vector2(463, -90)
-script = null
+[node name="notaire" parent="." instance=ExtResource("29_w0b0h")]
+position = Vector2(711, -32)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CL_Notaire" type="CanvasLayer" parent="notaire"]
+
+[node name="DialogueBoxNotaire" type="Panel" parent="notaire/CL_Notaire"]
+custom_minimum_size = Vector2(256, 128)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -241.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("21_pgnvl")
+dialogue_data = ExtResource("30_orr2w")
+options_vertical = true
+sample_portrait = null
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_4cpjo"), SubResource("RichTextEffect_8oxxc")])
 
 [connection signal="input_event" from="ExtérieurBatiment/entréeEglise" to="player" method="_on_entrée_eglise_input_event"]
 [connection signal="dialogue_ended" from="femme/CL_femme/DialogueBoxFemme" to="femme" method="_on_dialogue_box_dialogue_ended"]
 [connection signal="dialogue_ended" from="femme/CL_femme/DialogueBoxFemme" to="player" method="_on_dialogue_box_femme_dialogue_ended"]
 [connection signal="dialogue_started" from="femme/CL_femme/DialogueBoxFemme" to="femme" method="_on_dialogue_box_dialogue_started"]
 [connection signal="dialogue_started" from="femme/CL_femme/DialogueBoxFemme" to="player" method="_on_dialogue_box_femme_dialogue_started"]
+[connection signal="dialogue_ended" from="notaire/CL_Notaire/DialogueBoxNotaire" to="player" method="_on_dialogue_box_notaire_dialogue_ended"]
+[connection signal="dialogue_ended" from="notaire/CL_Notaire/DialogueBoxNotaire" to="notaire" method="_on_dialogue_box_notaire_dialogue_ended"]
+[connection signal="dialogue_started" from="notaire/CL_Notaire/DialogueBoxNotaire" to="player" method="_on_dialogue_box_notaire_dialogue_started"]
+[connection signal="dialogue_started" from="notaire/CL_Notaire/DialogueBoxNotaire" to="notaire" method="_on_dialogue_box_notaire_dialogue_started"]
+[connection signal="variable_changed" from="notaire/CL_Notaire/DialogueBoxNotaire" to="notaire" method="_on_dialogue_box_notaire_variable_changed"]
