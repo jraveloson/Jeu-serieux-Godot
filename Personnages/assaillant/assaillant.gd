@@ -18,6 +18,7 @@ func _process(delta):
 	if visibilite != true:
 		self.visible = false
 		Global.tempsRestantAssaillant = $TimerVisibilite.time_left
+		print($TimerVisibilite.time_left)
 	else:
 		self.visible = true
 	$Zone_Detection_Joueur.position.x = $CorpsNPC.position.x
@@ -73,6 +74,7 @@ func _on_dialogue_box_assaillant_dialogue_ended():
 		Global.visibiliteAssaillant = false
 		$TimerVisibilite.wait_time = 80
 		$TimerVisibilite.start()
+		idDialogue =""
 		
 
 

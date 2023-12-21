@@ -101,3 +101,8 @@ frame_progress = 0.409323
 
 [node name="hitboxPlayer" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_lmvbe")
+
+[node name="TimerProgressionJeu" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="TimerProgressionJeu" to="." method="_on_timer_progression_jeu_timeout"]
