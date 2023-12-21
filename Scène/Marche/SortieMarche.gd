@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var nom_label : Label
-@export var nomObject = "default"
+@export var nomObject = "Sortie"
 
 
 func _ready():
@@ -23,7 +23,7 @@ func _process(_delta):
 		if bodie is CharacterBody2D:
 			show_label()
 			if Input.is_action_pressed("Intéraction"):
-				get_tree().change_scene_to_file("res://Scène/Marche/Marche.tscn")
+				get_tree().change_scene_to_file("res://Scène/Amboise/Amboise.tscn")
 	if bodies.is_empty():
 		hide_label()
 

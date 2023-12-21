@@ -670,7 +670,6 @@ pause_manager = NodePath("CanvasLayer/pausemenu")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="pausemenu" parent="CanvasLayer" instance=ExtResource("2_hudwo")]
-process_mode = 0
 
 [node name="Arrière_plan" type="ParallaxBackground" parent="."]
 

@@ -97,3 +97,16 @@ func _on_dialogue_box_pretre_dialogue_started(id):
 	dialogueActiver = true
 	animated_sprite.play("idle")
 	animation_locked = true
+
+
+func _on_dialogue_box_marchand_dialogue_ended():
+	if idDialogue == "Marchand":
+		dialogueActiver = false
+		animation_locked = false
+
+
+func _on_dialogue_box_marchand_dialogue_started(id):
+	idDialogue = id
+	dialogueActiver = true
+	animated_sprite.play("idle")
+	animation_locked = true
