@@ -1,0 +1,90 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://coeqfyapp7v3b"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_4yrf8"]
+
+[resource]
+script = ExtResource("1_4yrf8")
+starts = {
+"Noble": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(141, 214),
+"start_id": "Noble"
+},
+"1_1": {
+"dialogue": "Proposer une alliance matrimoniale avec la fille du noble.",
+"offset": Vector2(380, 160),
+"options": {
+0: {
+"condition": {},
+"link": &"5_1",
+"text": "Oui, demander"
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Non"
+}
+},
+"size": Vector2(300, 307),
+"speaker": ""
+},
+"1_2": {
+"dialogue": "Le Noble a accepté votre proposition. Vous êtes anobli par agrégation. Victoire.",
+"offset": Vector2(1840, 140),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300.001, 245),
+"speaker": ""
+},
+"4_1": {
+"link": &"1_2",
+"offset": Vector2(1100, 240),
+"type": 0,
+"value": "1000",
+"variable": "prestige"
+},
+"4_2": {
+"link": &"1_2",
+"offset": Vector2(1440, 440),
+"type": 0,
+"value": "1000",
+"variable": "prestige"
+},
+"5_1": {
+"false": &"5_2",
+"offset": Vector2(740, 260),
+"operator": 4,
+"true": &"4_1",
+"value1": "{{richesse}}",
+"value2": "200"
+},
+"5_2": {
+"false": "END",
+"offset": Vector2(1100, 340),
+"operator": 4,
+"true": &"4_2",
+"value1": "{{prestige}}",
+"value2": "600"
+}
+}
+variables = {
+"prestige": {
+"type": 2,
+"value": 0.0
+},
+"richesse": {
+"type": 2,
+"value": 0.0
+}
+}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""
