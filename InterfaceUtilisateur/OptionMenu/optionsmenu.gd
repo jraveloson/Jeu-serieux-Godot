@@ -12,8 +12,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-
+	$Panel/MarginContainer/OptionBox/VBoxContainer/Master/MasterValue.text = str($Panel/MarginContainer/OptionBox/VBoxContainer/Master/HSlider.value)
+	$Panel/MarginContainer/OptionBox/VBoxContainer/Effets/EffetsValue.text = str($Panel/MarginContainer/OptionBox/VBoxContainer/Effets/HSlider.value)
+	$Panel/MarginContainer/OptionBox/VBoxContainer/Musique/MusiqueValue.text = str($Panel/MarginContainer/OptionBox/VBoxContainer/Musique/HSlider.value)
 
 func _on_quitter_pressed():
 	hide()
@@ -22,3 +23,4 @@ func _on_quitter_pressed():
 func _input(event : InputEvent):
 	if (event.is_action_pressed("pause")):
 		_on_quitter_pressed()
+

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnbftu8sfqg3g"]
+[gd_scene load_steps=6 format=3 uid="uid://cnbftu8sfqg3g"]
 
 [ext_resource type="LabelSettings" uid="uid://d0e6dx24tt0kw" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_MenuTitle.tres" id="1_lafkh"]
 [ext_resource type="Script" path="res://InterfaceUtilisateur/OptionMenu/optionsmenu.gd" id="1_q825m"]
 [ext_resource type="LabelSettings" uid="uid://5tuqh10xk411" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_MenuOptionsTitle.tres" id="2_64kn0"]
 [ext_resource type="LabelSettings" uid="uid://cpy7nxv1xhedi" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_MenuOptions.tres" id="2_wrvll"]
+[ext_resource type="LabelSettings" uid="uid://dajtdf2a18yw6" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_MenuOptions_SliderValue.tres" id="5_6tj0k"]
 
 [node name="optionsmenu" type="Control"]
 layout_mode = 3
@@ -83,6 +84,14 @@ label_settings = ExtResource("2_wrvll")
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_vertical = 4
+value = 50.0
+
+[node name="MasterValue" type="Label" parent="Panel/MarginContainer/OptionBox/VBoxContainer/Master"]
+layout_mode = 2
+text = " 50"
+label_settings = ExtResource("5_6tj0k")
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="Effets" type="HBoxContainer" parent="Panel/MarginContainer/OptionBox/VBoxContainer"]
 layout_mode = 2
@@ -96,6 +105,11 @@ label_settings = ExtResource("2_wrvll")
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_vertical = 4
+value = 50.0
+
+[node name="EffetsValue" type="Label" parent="Panel/MarginContainer/OptionBox/VBoxContainer/Effets"]
+layout_mode = 2
+label_settings = ExtResource("5_6tj0k")
 
 [node name="Musique" type="HBoxContainer" parent="Panel/MarginContainer/OptionBox/VBoxContainer"]
 layout_mode = 2
@@ -109,6 +123,11 @@ label_settings = ExtResource("2_wrvll")
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_vertical = 4
+value = 50.0
+
+[node name="MusiqueValue" type="Label" parent="Panel/MarginContainer/OptionBox/VBoxContainer/Musique"]
+layout_mode = 2
+label_settings = ExtResource("5_6tj0k")
 
 [node name="Quitter" type="Button" parent="Panel/MarginContainer"]
 custom_minimum_size = Vector2(80, 30)
