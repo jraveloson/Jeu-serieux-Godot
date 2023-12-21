@@ -2,7 +2,7 @@ extends Area2D
 
 @export var nom_label : Label
 @export var peutInterargir : bool = true
-@export var nomNPC = "default"
+@export var nomNPC = "Pretre"
 @export var etatDialogue : bool = false
 
 

@@ -76,7 +76,7 @@ Un individu mystérieux t'extorque",
 "offset": Vector2(820, 160),
 "type": 2,
 "value": "1",
-"variable": "sante"
+"variable": "vie"
 },
 "4_2": {
 "link": &"1_2",
@@ -110,7 +110,7 @@ variables = {
 "type": 2,
 "value": 0.0
 },
-"sante": {
+"vie": {
 "type": 2,
 "value": 0.0
 }

@@ -56,11 +56,11 @@ func _process(delta):
 func move(delta):	
 	if dir == Vector2.RIGHT:
 		animated_sprite2.play("walk")
-		animated_sprite2.flip_h = false
+		animated_sprite2.flip_h = true
 		position.x += 1 * vitesseDeplacement * delta
 	elif dir == Vector2.LEFT:
 		animated_sprite2.play("walk")
-		animated_sprite2.flip_h = true
+		animated_sprite2.flip_h = false
 		position.x += -1 * vitesseDeplacement * delta	
 	
 func choose(array):

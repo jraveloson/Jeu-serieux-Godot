@@ -48,6 +48,7 @@ func _ready():
 	nom_label.visible = false  # Rend le label invisible au début
 	$CL_Assaillant/DialogueBoxAssaillant.set_variable("prestige", TYPE_INT, Global.prestige)
 	$CL_Assaillant/DialogueBoxAssaillant.set_variable("richesse", TYPE_INT, Global.richesse)
+	$CL_Assaillant/DialogueBoxAssaillant.set_variable("vie", TYPE_INT, Global.vie)
 	if Global.tempsRestantAssaillant == 0:
 		visibilite = true
 	else:
@@ -87,6 +88,8 @@ func _on_dialogue_box_assaillant_variable_changed(var_name, value):
 		Global.prestige = value
 	if var_name == "richesse":
 		Global.richesse = value
+	if var_name == "vie":
+		Global.vie = value
 
 
 func _on_timer_visibilite_timeout():

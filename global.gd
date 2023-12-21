@@ -15,3 +15,4 @@ func _process(_delta):
 		prestige = 0
 		richesse = 30
 		vie = 3
+		tempsRestantAssaillant = 0

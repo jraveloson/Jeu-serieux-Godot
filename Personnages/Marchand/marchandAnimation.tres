@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://tly173ys8sg"]
+
+[ext_resource type="Texture2D" uid="uid://csdps5xvwwivw" path="res://Personnages/animation/Male1.png" id="1_faahr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pevr"]
+atlas = ExtResource("1_faahr")
+region = Rect2(0, 480, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56ss3"]
+atlas = ExtResource("1_faahr")
+region = Rect2(32, 480, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rk7yn"]
+atlas = ExtResource("1_faahr")
+region = Rect2(64, 480, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iykao"]
+atlas = ExtResource("1_faahr")
+region = Rect2(96, 480, 32, 48)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0pevr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56ss3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rk7yn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iykao")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

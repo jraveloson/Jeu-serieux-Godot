@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://704jd24x4y4d"]
+[gd_scene load_steps=25 format=3 uid="uid://704jd24x4y4d"]
 
 [ext_resource type="Script" path="res://Scène/Eglise/eglise.gd" id="1_6n72a"]
 [ext_resource type="Texture2D" uid="uid://d0udk0teoquvl" path="res://gothicvania church/assets/atlas/atlas.png" id="1_w4otv"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="9_56gee"]
 [ext_resource type="Resource" uid="uid://c348hks62mxma" path="res://Personnages/pretre/dialoguePretre.tres" id="9_v6llo"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="10_fmbsr"]
+[ext_resource type="LabelSettings" uid="uid://ba33t5yxedgnq" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_BuildingLabel.tres" id="10_nskvr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0hj4"]
 texture = ExtResource("1_w4otv")
@@ -6169,12 +6170,11 @@ ui_manager = NodePath("CanvasLayer/UI")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("2_q8xff")]
+metadata/_edit_use_anchors_ = true
 
-[node name="pausemenu" parent="CanvasLayer" node_paths=PackedStringArray("option_menu") instance=ExtResource("2_n0i1r")]
-option_menu = NodePath("../optionsmenu")
+[node name="pausemenu" parent="CanvasLayer" instance=ExtResource("2_n0i1r")]
 
-[node name="optionsmenu" parent="CanvasLayer" node_paths=PackedStringArray("caller") instance=ExtResource("4_ytx81")]
-caller = NodePath("../pausemenu")
+[node name="optionsmenu" parent="CanvasLayer" instance=ExtResource("4_ytx81")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(290, 599)
@@ -6204,6 +6204,7 @@ shape = SubResource("RectangleShape2D_7bb5i")
 [node name="nomPorte" type="Label" parent="TileMap/sortieEglise"]
 offset_right = 40.0
 offset_bottom = 23.0
+label_settings = ExtResource("10_nskvr")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -6228,7 +6229,7 @@ collision_layer = 2
 remote_path = NodePath("../../Camera2D")
 
 [node name="pretre" parent="." instance=ExtResource("7_n1nc5")]
-position = Vector2(728, 600)
+position = Vector2(726, 609)
 collision_layer = 4
 collision_mask = 2
 
