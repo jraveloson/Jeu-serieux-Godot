@@ -12,8 +12,15 @@ var was_in_air : bool = false
 var dialogueActiver = false
 var idDialogue
 
+func _ready():
+	$TimerProgressionJeu.wait_time = 1
+	$TimerProgressionJeu.one_shot = true
+	if $TimerProgressionJeu.is_stopped():
+		$TimerProgressionJeu.start()
 
 func _physics_process(delta):
+	
+
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -68,6 +75,7 @@ func _on_dialogue_box_femme_dialogue_started(id):
 	animated_sprite.play("idle")
 	animation_locked = true
 	
+	
 func _on_dialogue_box_tavernier_dialogue_started(id):
 	idDialogue = id
 	dialogueActiver = true
@@ -78,11 +86,15 @@ func _on_dialogue_box_femme_dialogue_ended():
 	if idDialogue == "Femme":
 		dialogueActiver = false
 		animation_locked = false
+		Global.secondes -= 2
+		idDialogue = ""
 
 func _on_dialogue_box_tavernier_dialogue_ended():
 	if idDialogue == "Tavernier":
 		dialogueActiver = false
 		animation_locked = false
+		Global.secondes -= 20
+		idDialogue = ""
 	
 
 
@@ -90,6 +102,8 @@ func _on_dialogue_box_pretre_dialogue_ended():
 	if idDialogue == "Pretre":
 		dialogueActiver = false
 		animation_locked = false
+		Global.secondes -= 6
+		idDialogue = ""
 
 
 func _on_dialogue_box_pretre_dialogue_started(id):
@@ -103,6 +117,8 @@ func _on_dialogue_box_marchand_dialogue_ended():
 	if idDialogue == "Marchand":
 		dialogueActiver = false
 		animation_locked = false
+		Global.secondes -= 5
+		idDialogue = ""
 
 
 func _on_dialogue_box_marchand_dialogue_started(id):
@@ -116,6 +132,8 @@ func _on_dialogue_box_notaire_dialogue_ended():
 	if idDialogue == "Notaire":
 		dialogueActiver = false
 		animation_locked = false
+		Global.secondes -= 7
+		idDialogue = ""
 
 
 func _on_dialogue_box_notaire_dialogue_started(id):
@@ -129,6 +147,8 @@ func _on_dialogue_box_assaillant_dialogue_ended():
 	if idDialogue == "Assaillant":
 		dialogueActiver = false
 		animation_locked = false
+		Global.secondes -= 15
+		idDialogue = ""
 
 
 func _on_dialogue_box_assaillant_dialogue_started(id):
@@ -136,3 +156,9 @@ func _on_dialogue_box_assaillant_dialogue_started(id):
 	dialogueActiver = true
 	animated_sprite.play("idle")
 	animation_locked = true
+
+
+func _on_timer_progression_jeu_timeout():
+	Global.secondes -= 1 
+	$TimerProgressionJeu.start()
+	print(Global.tempsJeu)

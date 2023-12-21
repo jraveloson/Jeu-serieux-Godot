@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://d1wmm1av4qdbk" path="res://Joueur/player.tscn" id="8_qyw8q"]
 [ext_resource type="Script" path="res://Scène/Marche/SortieMarche.gd" id="9_n4jcv"]
 [ext_resource type="LabelSettings" uid="uid://ba33t5yxedgnq" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_BuildingLabel.tres" id="10_ej42u"]
-[ext_resource type="PackedScene" path="res://Personnages/Marchand/marchand.tscn" id="11_ounnw"]
+[ext_resource type="PackedScene" uid="uid://dl2w1j8f1ts13" path="res://Personnages/Marchand/marchand.tscn" id="11_ounnw"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="12_txrum"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="13_j3kiy"]
 [ext_resource type="Resource" uid="uid://q45ygghkvg38" path="res://Personnages/Marchand/dialogueMarchand.tres" id="13_vmvka"]
@@ -4042,7 +4042,6 @@ remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(2, -6)
-scale = Vector2(1, 1)
 zoom = Vector2(2.5, 2.5)
 limit_left = 32
 limit_top = -1410065408
