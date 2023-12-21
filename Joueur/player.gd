@@ -123,3 +123,16 @@ func _on_dialogue_box_notaire_dialogue_started(id):
 	dialogueActiver = true
 	animated_sprite.play("idle")
 	animation_locked = true
+
+
+func _on_dialogue_box_assaillant_dialogue_ended():
+	if idDialogue == "Assaillant":
+		dialogueActiver = false
+		animation_locked = false
+
+
+func _on_dialogue_box_assaillant_dialogue_started(id):
+	idDialogue = id
+	dialogueActiver = true
+	animated_sprite.play("idle")
+	animation_locked = true
