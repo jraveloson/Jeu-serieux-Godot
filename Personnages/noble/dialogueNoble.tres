@@ -10,16 +10,16 @@ starts = {
 nodes = {
 "0_1": {
 "link": &"1_1",
-"offset": Vector2(141, 214),
+"offset": Vector2(-220, 200),
 "start_id": "Noble"
 },
 "1_1": {
 "dialogue": "Proposer une alliance matrimoniale avec la fille du noble.",
-"offset": Vector2(380, 160),
+"offset": Vector2(40, 200),
 "options": {
 0: {
 "condition": {},
-"link": &"5_1",
+"link": &"5_2",
 "text": "Oui, demander"
 },
 1: {
@@ -33,7 +33,7 @@ nodes = {
 },
 "1_2": {
 "dialogue": "Le Noble a accepté votre proposition. Vous êtes anobli par agrégation. Victoire.",
-"offset": Vector2(1840, 140),
+"offset": Vector2(1340, 20),
 "options": {
 0: {
 "condition": {},
@@ -41,41 +41,71 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.001, 245),
+"size": Vector2(659.701, 294.7),
+"speaker": ""
+},
+"1_3": {
+"dialogue": "Le Noble n'a pas accepté votre proposition. Vous avez été humilié lors de votre demande en public.",
+"offset": Vector2(1940, 320),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": ""
+},
+"1_4": {
+"dialogue": "Vous êtes si pauvre et vous souhaitez épcouser ma fille ? Hors de ma vue !",
+"offset": Vector2(820, 440),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
 "speaker": ""
 },
 "4_1": {
-"link": &"1_2",
-"offset": Vector2(1100, 240),
-"type": 0,
-"value": "1000",
+"link": &"4_2",
+"offset": Vector2(1160, 360),
+"type": 2,
+"value": "50",
 "variable": "prestige"
 },
 "4_2": {
-"link": &"1_2",
-"offset": Vector2(1440, 440),
-"type": 0,
-"value": "1000",
+"link": &"1_3",
+"offset": Vector2(1540, 360),
+"type": 4,
+"value": "2",
 "variable": "prestige"
 },
 "5_1": {
-"false": &"5_2",
-"offset": Vector2(740, 260),
-"operator": 4,
-"true": &"4_1",
-"value1": "{{richesse}}",
-"value2": "200"
+"false": &"4_1",
+"offset": Vector2(800, 200),
+"operator": 0,
+"true": &"1_2",
+"value1": "{{chance}}",
+"value2": "true"
 },
 "5_2": {
-"false": "END",
-"offset": Vector2(1100, 340),
+"false": &"1_4",
+"offset": Vector2(420, 180),
 "operator": 4,
-"true": &"4_2",
-"value1": "{{prestige}}",
-"value2": "600"
+"true": &"5_1",
+"value1": "{{richesse}}",
+"value2": "50"
 }
 }
 variables = {
+"chance": {
+"type": 1,
+"value": false
+},
 "prestige": {
 "type": 2,
 "value": 0.0

@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://mbskbhuj1kp5" path="res://GothicVania-town-files/GothicVania-town-files/code/phaser-code/assets/environment/background.png" id="1_opvty"]
 [ext_resource type="PackedScene" uid="uid://cnbftu8sfqg3g" path="res://InterfaceUtilisateur/OptionMenu/optionsmenu.tscn" id="2_p2adn"]
 [ext_resource type="Texture2D" uid="uid://cbgkl8extd2sr" path="res://GothicVania-town-files/GothicVania-town-files/code/phaser-code/assets/environment/middleground.png" id="2_xkebc"]
-[ext_resource type="LabelSettings" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_TitleScreen_Text.tres" id="3_4e8fn"]
+[ext_resource type="LabelSettings" uid="uid://dwf01iydhwctk" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_TitleScreen_Text.tres" id="3_4e8fn"]
 [ext_resource type="PackedScene" uid="uid://qavaq5q080f5" path="res://Scène/EcranTitre/Boutons/bouton_jouer.tscn" id="4_nbkkc"]
 [ext_resource type="PackedScene" uid="uid://bilcm26crmjaf" path="res://Scène/EcranTitre/Boutons/bouton_options.tscn" id="5_l875e"]
 [ext_resource type="Script" path="res://Scène/EcranTitre/Boutons/bouton_jouer.gd" id="5_q5k3q"]
 [ext_resource type="PackedScene" uid="uid://vndc7xdatsy2" path="res://Scène/EcranTitre/Boutons/bouton_quitter.tscn" id="6_v7pdr"]
-[ext_resource type="LabelSettings" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_TitleScreen_Authors.tres" id="7_bvjyi"]
+[ext_resource type="LabelSettings" uid="uid://16ewlysa8pcx" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_TitleScreen_Authors.tres" id="7_bvjyi"]
 
 [node name="TitleScreen" type="Control" node_paths=PackedStringArray("option_menu")]
 layout_mode = 3

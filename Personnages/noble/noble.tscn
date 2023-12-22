@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://c1kmcd4aeh5ds"]
+
+[ext_resource type="Script" path="res://Personnages/noble/noble.gd" id="1_6uysf"]
+[ext_resource type="Script" path="res://Personnages/noble/CorpsNoble.gd" id="2_0kyep"]
+[ext_resource type="SpriteFrames" uid="uid://7junv17yn34v" path="res://Personnages/noble/nobleAnimation.tres" id="3_g23pb"]
+[ext_resource type="LabelSettings" uid="uid://dnouf360rvrr0" path="res://InterfaceUtilisateur/Labels Settings/LabelSetting_CharacterLabel.tres" id="4_u6bab"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1hhb2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fiw8b"]
+radius = 50.0
+
+[node name="noble" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_6uysf")
+
+[node name="CorpsNPC" type="CharacterBody2D" parent="."]
+collision_layer = 4
+script = ExtResource("2_0kyep")
+
+[node name="TimerAnimation" type="Timer" parent="CorpsNPC"]
+
+[node name="AnimationNPC" type="AnimatedSprite2D" parent="CorpsNPC"]
+scale = Vector2(1.15, 1.3)
+sprite_frames = ExtResource("3_g23pb")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Hitbox" type="CollisionShape2D" parent="CorpsNPC"]
+position = Vector2(0, 3.5)
+shape = SubResource("CapsuleShape2D_1hhb2")
+
+[node name="TimerCorrectionAnimation" type="Timer" parent="CorpsNPC"]
+
+[node name="Zone_Detection_Joueur" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fiw8b")
+
+[node name="Nom" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -41.0
+offset_right = 20.0
+offset_bottom = -18.0
+label_settings = ExtResource("4_u6bab")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerDetection" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="timeout" from="CorpsNPC/TimerAnimation" to="CorpsNPC" method="_on_timer_animation_timeout"]
+[connection signal="timeout" from="CorpsNPC/TimerCorrectionAnimation" to="CorpsNPC" method="_on_timer_correction_animation_timeout"]
