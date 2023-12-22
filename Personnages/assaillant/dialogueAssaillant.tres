@@ -73,7 +73,7 @@ Un individu mystérieux t'extorque",
 },
 "1_5": {
 "dialogue": "Malheureusement, tu t'es blessé lors de la confrontation mais des sous lui-sont tombés du porte-feuille",
-"offset": Vector2(1500, -1100),
+"offset": Vector2(1900, -1180),
 "options": {
 0: {
 "condition": {},
@@ -81,7 +81,7 @@ Un individu mystérieux t'extorque",
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": ""
 },
 "1_6": {
@@ -94,7 +94,7 @@ Un individu mystérieux t'extorque",
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": ""
 },
 "1_7": {
@@ -107,7 +107,7 @@ Un individu mystérieux t'extorque",
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": ""
 },
 "1_8": {
@@ -120,7 +120,7 @@ Un individu mystérieux t'extorque",
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": ""
 },
 "4_1": {

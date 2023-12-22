@@ -12,6 +12,12 @@ var chance
 var nombreAléatoire
 var chanceMax
 var chanceAssaillant
+var occupe : bool
+var chanceTavernier : bool
+
+var noblesse : bool
+var mariage : bool
+var jeuTerminer : bool
 
 var nbOui = 0
 var nbNon = 0
@@ -34,6 +40,9 @@ var minutes : int
 var tempsJeu : int
 
 func _ready():
+	noblesse = false
+	mariage = false
+	jeuTerminer = false
 	conditionNoble = false
 	chance = RandomNumberGenerator.new()
 	secondes = secMax
@@ -52,6 +61,14 @@ func _process(_delta):
 	
 	chanceNoble()
 	chanceCombat()
+	chanceTavernierFonction()
+
+func chanceTavernierFonction():
+	
+	if nombreAléatoire >= 50:
+		chanceTavernier = true
+	else:
+		chanceTavernier = false
 
 func chanceCombat():
 	if nombreAléatoire >= 0 && nombreAléatoire < 15:
@@ -64,7 +81,7 @@ func chanceCombat():
 		chanceAssaillant = 4
 	if nombreAléatoire >= 50:
 		chanceAssaillant = 0
-	print(chanceAssaillant)
+
 func chanceNoble():
 	if prestige <= 200:
 		chanceMax = 5
@@ -77,7 +94,7 @@ func chanceNoble():
 	if prestige >= 900:
 		chanceMax = 70
 	chance.seed = secondes
-	nombreAléatoire = chance.randi_range(1, 100) 
+	nombreAléatoire = chance.randi_range(0, 100) 
 	if nombreAléatoire < chanceMax:
 		conditionNoble = true
 	else:

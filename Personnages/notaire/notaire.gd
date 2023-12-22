@@ -23,7 +23,7 @@ func _process(delta):
 		if bodie is CharacterBody2D:
 			$TimerDetection.start()
 			show_label()
-			if Input.is_action_pressed("Intéraction") && peutInterargir == true && etatDialogue == false:
+			if Input.is_action_pressed("Intéraction") && Global.occupe == false && peutInterargir == true && etatDialogue == false:
 				$CL_Notaire/DialogueBoxNotaire.start("Notaire")
 	if bodies.is_empty():
 		hide_label()
