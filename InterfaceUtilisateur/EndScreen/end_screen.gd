@@ -59,9 +59,11 @@ func _on_restart_button_pressed():
 	Global.recommencer = true
 	get_tree().reload_current_scene()
 	hide()
-	
+
 func _on_menu_button_pressed():
+	hide()
 	get_tree().change_scene_to_file("res://Scène/EcranTitre/EcranTitre.tscn")
+	
 
 
 func _on_quit_button_pressed():

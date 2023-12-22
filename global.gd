@@ -22,9 +22,9 @@ var jeuTerminer : bool
 var nbOui = 0
 var nbNon = 0
 
-var prestige = 0
-var richesse = 300	
-var vie = 3
+var prestige
+var richesse
+var vie
 
 #durée du temps de jeu max
 var tempsMax : int
@@ -40,6 +40,9 @@ var minutes : int
 var tempsJeu : int
 
 func _ready():
+	prestige = 0
+	richesse = 30
+	vie = 1
 	noblesse = false
 	mariage = false
 	jeuTerminer = false
@@ -126,14 +129,19 @@ func restart():
 
 func verifyEndCondition():
 	if (prestige > 1000):
+		_ready()
 		return "king"
 	elif (noblesse):
+		_ready()
 		return "bought"
 	elif (mariage):
+		_ready()
 		return "married"
 	elif (vie == 0):
+		_ready()
 		return "death"
 	elif (prestige < 0):
+		_ready()
 		return "dishonor"
 	else:
 		return "notfinished"
