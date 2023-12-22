@@ -1,5 +1,7 @@
 extends Control
 
+class_name EndManager
+
 var perdu : String = "Vous avez perdu ..."
 var gagne : String = "Vous avez gagné !"
 
