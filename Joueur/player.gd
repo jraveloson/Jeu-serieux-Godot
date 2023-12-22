@@ -165,3 +165,18 @@ func _on_timer_progression_jeu_timeout():
 
 func _on_timer_bijou_timeout():
 	Global.nombreBijou += 1
+
+
+func _on_dialogue_box_noble_dialogue_ended():
+	if idDialogue == "Noble":
+		dialogueActiver = false
+		animation_locked = false
+		Global.secondes -= 9
+		idDialogue = ""
+
+
+func _on_dialogue_box_noble_dialogue_started(id):
+	idDialogue = id
+	dialogueActiver = true
+	animated_sprite.play("idle")
+	animation_locked = true

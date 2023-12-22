@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://dakl0x4wmagel"]
+[gd_scene load_steps=60 format=3 uid="uid://dakl0x4wmagel"]
 
 [ext_resource type="Script" path="res://Scène/Amboise/Amboise.gd" id="1_fr0hd"]
 [ext_resource type="PackedScene" uid="uid://0qliln2pnirn" path="res://InterfaceUtilisateur/PauseMenu/pausemenu.tscn" id="2_hudwo"]
@@ -32,6 +32,8 @@
 [ext_resource type="Resource" uid="uid://dw6qxftjd4dys" path="res://Personnages/notaire/dialogueNotaire.tres" id="30_orr2w"]
 [ext_resource type="PackedScene" uid="uid://dq8a70s65hjut" path="res://Personnages/assaillant/assaillant.tscn" id="31_wcg8s"]
 [ext_resource type="Resource" uid="uid://cjd1vw3poid65" path="res://Personnages/assaillant/dialogueAssaillant.tres" id="32_ladb1"]
+[ext_resource type="PackedScene" uid="uid://c1kmcd4aeh5ds" path="res://Personnages/noble/noble.tscn" id="33_a47v6"]
+[ext_resource type="Resource" uid="uid://coeqfyapp7v3b" path="res://Personnages/noble/dialogueNoble.tres" id="34_triop"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ychi"]
 texture = ExtResource("5_hxbfj")
@@ -680,6 +682,12 @@ script = ExtResource("23_ndj3f")
 [sub_resource type="RichTextEffect" id="RichTextEffect_g5hea"]
 script = ExtResource("24_jtw67")
 
+[sub_resource type="RichTextEffect" id="RichTextEffect_k2wj8"]
+script = ExtResource("23_ndj3f")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_wdjd4"]
+script = ExtResource("24_jtw67")
+
 [node name="Amboise" type="Node2D" node_paths=PackedStringArray("pause_manager", "ui_manager")]
 script = ExtResource("1_fr0hd")
 pause_manager = NodePath("CanvasLayer/pausemenu")
@@ -904,6 +912,27 @@ options_vertical = true
 sample_portrait = null
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_al8rj"), SubResource("RichTextEffect_g5hea")])
 
+[node name="noble" parent="." instance=ExtResource("33_a47v6")]
+position = Vector2(843, -23)
+
+[node name="CL_Noble" type="CanvasLayer" parent="noble"]
+
+[node name="DialogueBoxNoble" type="Panel" parent="noble/CL_Noble"]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -228.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("21_pgnvl")
+dialogue_data = ExtResource("34_triop")
+options_vertical = true
+sample_portrait = null
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_k2wj8"), SubResource("RichTextEffect_wdjd4")])
+
 [connection signal="input_event" from="ExtérieurBatiment/entréeEglise" to="player" method="_on_entrée_eglise_input_event"]
 [connection signal="dialogue_ended" from="femme/CL_femme/DialogueBoxFemme" to="femme" method="_on_dialogue_box_dialogue_ended"]
 [connection signal="dialogue_ended" from="femme/CL_femme/DialogueBoxFemme" to="player" method="_on_dialogue_box_femme_dialogue_ended"]
@@ -919,3 +948,8 @@ custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_al8rj"), Sub
 [connection signal="dialogue_started" from="assaillant/CL_Assaillant/DialogueBoxAssaillant" to="player" method="_on_dialogue_box_assaillant_dialogue_started"]
 [connection signal="dialogue_started" from="assaillant/CL_Assaillant/DialogueBoxAssaillant" to="assaillant" method="_on_dialogue_box_assaillant_dialogue_started"]
 [connection signal="variable_changed" from="assaillant/CL_Assaillant/DialogueBoxAssaillant" to="assaillant" method="_on_dialogue_box_assaillant_variable_changed"]
+[connection signal="dialogue_ended" from="noble/CL_Noble/DialogueBoxNoble" to="player" method="_on_dialogue_box_noble_dialogue_ended"]
+[connection signal="dialogue_ended" from="noble/CL_Noble/DialogueBoxNoble" to="noble" method="_on_dialogue_box_noble_dialogue_ended"]
+[connection signal="dialogue_started" from="noble/CL_Noble/DialogueBoxNoble" to="player" method="_on_dialogue_box_noble_dialogue_started"]
+[connection signal="dialogue_started" from="noble/CL_Noble/DialogueBoxNoble" to="noble" method="_on_dialogue_box_noble_dialogue_started"]
+[connection signal="variable_changed" from="noble/CL_Noble/DialogueBoxNoble" to="noble" method="_on_dialogue_box_noble_variable_changed"]
