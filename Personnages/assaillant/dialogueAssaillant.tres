@@ -20,7 +20,7 @@ Un individu mystérieux t'extorque",
 "options": {
 0: {
 "condition": {},
-"link": &"4_1",
+"link": &"5_2",
 "text": "Lui tenir tête"
 },
 1: {
@@ -60,7 +60,7 @@ Un individu mystérieux t'extorque",
 },
 "1_4": {
 "dialogue": "Malheureusement, tu t'es blessé lors de la confrontation",
-"offset": Vector2(1240, 20),
+"offset": Vector2(1500, -340),
 "options": {
 0: {
 "condition": {},
@@ -71,9 +71,61 @@ Un individu mystérieux t'extorque",
 "size": Vector2(300.001, 276),
 "speaker": ""
 },
+"1_5": {
+"dialogue": "Malheureusement, tu t'es blessé lors de la confrontation mais des sous lui-sont tombés du porte-feuille",
+"offset": Vector2(1500, -1100),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": ""
+},
+"1_6": {
+"dialogue": "Des passants sont venus de protéger, tu n'es pas blessé !",
+"offset": Vector2(1940, -780),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": ""
+},
+"1_7": {
+"dialogue": "L'assaillant n'est qu'un veille homme ! Pourtant tu t'es fait battre qui plus est devant des Dames. Tu perds en pretisge suite à telle honte !",
+"offset": Vector2(1860, -500),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": ""
+},
+"1_8": {
+"dialogue": "Tu as gagné face à l'Assaillant ! Tu l'as même ramené aux gardes qui t'ont grâcement récompensés !",
+"offset": Vector2(1820, -20),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": ""
+},
 "4_1": {
-"link": &"1_4",
-"offset": Vector2(820, 160),
+"link": &"4_8",
+"offset": Vector2(1140, -840),
 "type": 2,
 "value": "1",
 "variable": "vie"
@@ -89,8 +141,50 @@ Un individu mystérieux t'extorque",
 "link": &"1_3",
 "offset": Vector2(1240, 420),
 "type": 0,
-"value": "0",
+"value": "-1",
 "variable": "richesse"
+},
+"4_4": {
+"link": &"1_7",
+"offset": Vector2(1480, -500),
+"type": 2,
+"value": "15",
+"variable": "prestige"
+},
+"4_5": {
+"link": &"4_4",
+"offset": Vector2(1140, -500),
+"type": 2,
+"value": "1",
+"variable": "vie"
+},
+"4_6": {
+"link": &"1_4",
+"offset": Vector2(1100, -320),
+"type": 2,
+"value": "1",
+"variable": "vie"
+},
+"4_7": {
+"link": &"4_9",
+"offset": Vector2(1060, -20),
+"type": 1,
+"value": "15",
+"variable": "richesse"
+},
+"4_8": {
+"link": &"1_5",
+"offset": Vector2(1500, -840),
+"type": 1,
+"value": "7",
+"variable": "richesse"
+},
+"4_9": {
+"link": &"1_8",
+"offset": Vector2(1440, -20),
+"type": 1,
+"value": "15",
+"variable": "prestige"
 },
 "5_1": {
 "false": &"4_3",
@@ -99,9 +193,53 @@ Un individu mystérieux t'extorque",
 "true": &"4_2",
 "value1": "{{richesse}}",
 "value2": "25"
+},
+"5_2": {
+"false": &"5_3",
+"offset": Vector2(700, -860),
+"operator": 0,
+"true": &"4_1",
+"value1": "{{chance}}",
+"value2": "3"
+},
+"5_3": {
+"false": &"5_4",
+"offset": Vector2(700, -700),
+"operator": 0,
+"true": &"1_6",
+"value1": "{{chance}}",
+"value2": "1"
+},
+"5_4": {
+"false": &"5_5",
+"offset": Vector2(700, -560),
+"operator": 0,
+"true": &"4_5",
+"value1": "{{chance}}",
+"value2": "2"
+},
+"5_5": {
+"false": &"5_6",
+"offset": Vector2(700, -420),
+"operator": 0,
+"true": &"4_6",
+"value1": "{{chance}}",
+"value2": "0"
+},
+"5_6": {
+"false": "END",
+"offset": Vector2(700, -280),
+"operator": 0,
+"true": &"4_7",
+"value1": "{{chance}}",
+"value2": "4"
 }
 }
 variables = {
+"chance": {
+"type": 2,
+"value": 0.0
+},
 "prestige": {
 "type": 2,
 "value": 0.0

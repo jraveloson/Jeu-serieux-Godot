@@ -11,6 +11,7 @@ var conditionNoble : bool
 var chance
 var nombreAléatoire
 var chanceMax
+var chanceAssaillant
 
 var nbOui = 0
 var nbNon = 0
@@ -50,7 +51,20 @@ func _process(_delta):
 	metier()
 	
 	chanceNoble()
-	
+	chanceCombat()
+
+func chanceCombat():
+	if nombreAléatoire >= 0 && nombreAléatoire < 15:
+		chanceAssaillant = 1
+	if nombreAléatoire >= 15 && nombreAléatoire < 30:
+		chanceAssaillant = 2
+	if nombreAléatoire >= 30 && nombreAléatoire < 40:
+		chanceAssaillant = 3
+	if nombreAléatoire >= 40 && nombreAléatoire < 50:
+		chanceAssaillant = 4
+	if nombreAléatoire >= 50:
+		chanceAssaillant = 0
+	print(chanceAssaillant)
 func chanceNoble():
 	if prestige <= 200:
 		chanceMax = 5
