@@ -26,8 +26,16 @@ https://git.unistra.fr/t3_mod23_e/amboise/-/wikis/Les-voies-de-la-noblesse
 ![](https://lh7-us.googleusercontent.com/7I9Ai0d_iwVq7O5M0TGblmh3RGfYrWN4_ddob9gn1AKqfgdFMuZn-WszBDDXqNq0n4wl-mEHvTtudTxJ1zFnk83XlxVPokvIJdw5BQhygVjZsuggFFiIala18x69nlKWhdUGdYJH-9TGYTJWebbvAcU)
 
 ## Procédure d'installation et d'exécution
+### Windows 
+[Installateur]{https://git.unistra.fr/maguillemain/amboise-mathilde/-/tree/main/Installer}
+[Executable]{https://git.unistra.fr/maguillemain/amboise-mathilde/-/tree/main/Executables/Windows}
+### Linux
+[Executable]{https://git.unistra.fr/maguillemain/amboise-mathilde/-/tree/main/Executables/Linux}
+>Pour executer le fichier x86:
+```bash
+    chmod u+x <fichier>
+```
 # Réutilisation du jeu
-
 ## Pour continuer le développement du jeu
 
 1. Installer godot
