@@ -42,7 +42,7 @@ var tempsJeu : int
 func _ready():
 	prestige = 0
 	richesse = 30
-	vie = 1
+	vie = 3
 	noblesse = false
 	mariage = false
 	jeuTerminer = false
