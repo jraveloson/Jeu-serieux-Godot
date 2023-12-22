@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://q42od8yd1v2u"]
+[gd_scene load_steps=46 format=3 uid="uid://q42od8yd1v2u"]
 
 [ext_resource type="Texture2D" uid="uid://ba17dym30cpdu" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/background.png" id="1_2jr5k"]
 [ext_resource type="Script" path="res://Scène/Taverne/taverne.gd" id="1_r5uea"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://4r63u7uka41d" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/sliced-tileset/ground-wall.png" id="3_78x4o"]
 [ext_resource type="PackedScene" uid="uid://cnbftu8sfqg3g" path="res://InterfaceUtilisateur/OptionMenu/optionsmenu.tscn" id="4_bfwyr"]
 [ext_resource type="Texture2D" uid="uid://cawata2w2fpf4" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/sliced-tileset/ground.png" id="4_vwmrb"]
+[ext_resource type="PackedScene" uid="uid://dax5kh61mc1yx" path="res://InterfaceUtilisateur/EndScreen/end_screen.tscn" id="5_3xkrb"]
 [ext_resource type="Texture2D" uid="uid://du5vcv2ll1ha7" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/environment-preview.png" id="5_rpa7l"]
 [ext_resource type="Texture2D" uid="uid://b0dt4njcqbe6i" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/sliced-tileset/window-bars.png" id="6_f5ecw"]
 [ext_resource type="Texture2D" uid="uid://cccfw8egx15k7" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/props-sliced/house-c.png" id="6_qitp8"]
@@ -11720,6 +11721,8 @@ metadata/_edit_use_anchors_ = true
 [node name="optionsmenu" parent="CanvasLayer" node_paths=PackedStringArray("caller") instance=ExtResource("4_bfwyr")]
 caller = NodePath("../pausemenu")
 metadata/_edit_use_anchors_ = true
+
+[node name="EndScreen" parent="CanvasLayer" instance=ExtResource("5_3xkrb")]
 
 [node name="Arrière_plan" type="ParallaxBackground" parent="."]
 offset = Vector2(0, -237)

@@ -133,5 +133,7 @@ func verifyEndCondition():
 		return "married"
 	elif (vie == 0):
 		return "death"
-	elif (prestige > 0):
+	elif (prestige < 0):
 		return "dishonor"
+	else:
+		return "notfinished"

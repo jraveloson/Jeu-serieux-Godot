@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://704jd24x4y4d"]
+[gd_scene load_steps=26 format=3 uid="uid://704jd24x4y4d"]
 
 [ext_resource type="Script" path="res://Scène/Eglise/eglise.gd" id="1_6n72a"]
 [ext_resource type="Texture2D" uid="uid://d0udk0teoquvl" path="res://gothicvania church/assets/atlas/atlas.png" id="1_w4otv"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cp5s5dp0o4xeb" path="res://gothicvania church/assets/environment/columns.png" id="3_lv1f4"]
 [ext_resource type="Texture2D" uid="uid://db12rfoh4p8fu" path="res://gothicvania church/assets/environment/tileset.png" id="4_cch0f"]
 [ext_resource type="PackedScene" uid="uid://cnbftu8sfqg3g" path="res://InterfaceUtilisateur/OptionMenu/optionsmenu.tscn" id="4_ytx81"]
+[ext_resource type="PackedScene" uid="uid://dax5kh61mc1yx" path="res://InterfaceUtilisateur/EndScreen/end_screen.tscn" id="5_8n4s3"]
 [ext_resource type="Script" path="res://Scène/Eglise/sortieEglise.gd" id="5_oawdu"]
 [ext_resource type="PackedScene" uid="uid://d1wmm1av4qdbk" path="res://Joueur/player.tscn" id="6_f4n2d"]
 [ext_resource type="PackedScene" uid="uid://baexyjphxwd6x" path="res://Personnages/pretre/pretre.tscn" id="7_n1nc5"]
@@ -6162,10 +6163,11 @@ script = ExtResource("9_56gee")
 [sub_resource type="RichTextEffect" id="RichTextEffect_56xmg"]
 script = ExtResource("10_fmbsr")
 
-[node name="Eglise" type="Node2D" node_paths=PackedStringArray("pause_manager", "ui_manager")]
+[node name="Eglise" type="Node2D" node_paths=PackedStringArray("pause_manager", "ui_manager", "end_menu")]
 script = ExtResource("1_6n72a")
 pause_manager = NodePath("CanvasLayer/pausemenu")
 ui_manager = NodePath("CanvasLayer/UI")
+end_menu = NodePath("CanvasLayer/EndScreen")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -6177,6 +6179,8 @@ option_menu = NodePath("../optionsmenu")
 
 [node name="optionsmenu" parent="CanvasLayer" node_paths=PackedStringArray("caller") instance=ExtResource("4_ytx81")]
 caller = NodePath("../pausemenu")
+
+[node name="EndScreen" parent="CanvasLayer" instance=ExtResource("5_8n4s3")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(290, 599)

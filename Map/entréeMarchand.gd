@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var nom_label : Label
-@export var nomObject = "default"
+@export var nomObject = "Marche"
 
 
 func _ready():

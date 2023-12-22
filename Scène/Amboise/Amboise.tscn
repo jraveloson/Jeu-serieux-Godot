@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://dakl0x4wmagel"]
+[gd_scene load_steps=61 format=3 uid="uid://dakl0x4wmagel"]
 
 [ext_resource type="Script" path="res://Scène/Amboise/Amboise.gd" id="1_fr0hd"]
 [ext_resource type="PackedScene" uid="uid://0qliln2pnirn" path="res://InterfaceUtilisateur/PauseMenu/pausemenu.tscn" id="2_hudwo"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://vv1d15m5ukfg" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/middleground.png" id="4_0e525"]
 [ext_resource type="PackedScene" uid="uid://cnbftu8sfqg3g" path="res://InterfaceUtilisateur/OptionMenu/optionsmenu.tscn" id="4_627jl"]
 [ext_resource type="Texture2D" uid="uid://cawata2w2fpf4" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/sliced-tileset/ground.png" id="5_hxbfj"]
+[ext_resource type="PackedScene" uid="uid://dax5kh61mc1yx" path="res://InterfaceUtilisateur/EndScreen/end_screen.tscn" id="5_xsqom"]
 [ext_resource type="Texture2D" uid="uid://7pqkjd2hw13j" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/props-sliced/well.png" id="6_wqtfi"]
 [ext_resource type="Texture2D" uid="uid://7nsqertnyaon" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/sliced-tileset/ground-b.png" id="7_gtntj"]
 [ext_resource type="Texture2D" uid="uid://b3haqf8t8pib8" path="res://GothicVania-town-files/GothicVania-town-files/PNG/environment/layers/sliced-tileset/ground-corner.png" id="8_p4mg6"]
@@ -688,10 +689,11 @@ script = ExtResource("23_ndj3f")
 [sub_resource type="RichTextEffect" id="RichTextEffect_wdjd4"]
 script = ExtResource("24_jtw67")
 
-[node name="Amboise" type="Node2D" node_paths=PackedStringArray("pause_manager", "ui_manager")]
+[node name="Amboise" type="Node2D" node_paths=PackedStringArray("pause_manager", "ui_manager", "end_menu")]
 script = ExtResource("1_fr0hd")
 pause_manager = NodePath("CanvasLayer/pausemenu")
 ui_manager = NodePath("CanvasLayer/UI")
+end_menu = NodePath("CanvasLayer/EndScreen")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -702,6 +704,8 @@ option_menu = NodePath("../optionsmenu")
 
 [node name="optionsmenu" parent="CanvasLayer" node_paths=PackedStringArray("caller") instance=ExtResource("4_627jl")]
 caller = NodePath("../pausemenu")
+
+[node name="EndScreen" parent="CanvasLayer" instance=ExtResource("5_xsqom")]
 
 [node name="Arrière_plan" type="ParallaxBackground" parent="."]
 
@@ -805,7 +809,6 @@ position = Vector2(1420, -20)
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("18_oa2i2")
-nomObject = "Echoppe"
 
 [node name="porte" type="CollisionShape2D" parent="ExtérieurBatiment/entréeMarchand"]
 position = Vector2(-430, -4)
