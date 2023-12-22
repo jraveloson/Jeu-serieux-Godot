@@ -1,57 +1,30 @@
-# DialogueNodes
-![DialogueNodes editor](.screenshots/DN0.png)
-<img src='.screenshots/DN1.png' width='51%'/>
-<img src='.screenshots/DN2.png' width='48%'/>
-A plugin for creating and exporting dialogue trees from within the Godot Editor.
-Godot provides all the tools needed to create your own dialogue system, however, for most game developers, this task is tedious and complex. This is where Dialogue Nodes come into the picture. The plugin extends your Godot editor to allow for creating, testing and incorporating branching dialogues in your game.
+# Présentation du projet T3_MOD23_E
 
-#####
-## Installation
-- Open the `AssetLib` tab in Godot with your project open.
-- Search for "DialogueNodes" and install the plugin by Nagi
-- Once the download completes, deselect everything in the popup window except for the `addons` folder.
-- You can also select the examples folder if you want to check out some ready-made dialogues.
-- Open project settings > plugins, and enable DialogueNodes.
-- Done!
+L'objectif du projet est de réaliser un jeu vidéo sérieux afin de communiquer des connaissances au joueur de manière ludique et subtile.
+### Nom du groupe : Les Vieux
+### Membres du groupe :
+AKGUL Adrien, ALLAL Gwénolé, GUILLEMAIN Mathilde, RAVELOSON Joanna.
+### Lien vers le Cahier des Charges
+https://docs.google.com/document/d/1Yb77904rVfQssaoo3OgVcBGygULyCSnuEOo0G6GO9XE/edit#heading=h.fdbtfm86g63h
 
-For installation from the github repo, you can find the instructions in [the wiki](https://github.com/nagidev/DialogueNodes/wiki).
+### Thème : Histoire
+Le jeu se déroule dans la ville d'Amboise entre 1450 et 1574.
 
-#####
-## Features
-### Simple and straight-forward editor
-The dialogue editor was created with the focus on keeping the workflow simple and easy to pick up. While the editor supports powerful features under the hood, it tries to stay out of the way of the user. A beginner can easily pick up the editor and start creating basic dialogues thanks to the intuitive design. If your focus is on creating simple dialogues for your game, you can get setup in no time. If you want to work with multiple dialogue files, or put all the branching dialogues in one file, DialogueNodes have got you covered. Heck! Do both if you want!
+# Présentation du jeu
 
-### Dialogue animations, conditions, variables, signals: its all there!
-The real power of the plugin lies in the tools it provides the user to utilize the full potential of the feature rich dialogue editor. Be it using variable values in the dialogue, conditional dialogues or even conditional options, modifying variable values and even emitting signals which open up a world of posibilities when it comes to custom events during the dialogue.
+Les voies de la noblesse est un "Side-Scroller" à l'image de [Kingdom Two Crowns](https://www.youtube.com/watch?v=GnqjjY38anQ). Le joueur se déplace sur un écran qui défile sur les bords latéraux. C'est un "jeu de rôle" où vous incarnez un bourgeois qui s'est fait pour objectif de devenir noble. Amboise, ville royale, est une ville sûre et respectable. Côtoyez les nobles et bourgeois pour faire connaître votre nom au sein de la cour ou enrichissez-vous afin d'acheter un titre de noblesse. À moins que vous ne trouviez l'amour pour la fille d'un noble !
+### Lien vers le Wiki :
+https://git.unistra.fr/t3_mod23_e/amboise/-/wikis/Les-voies-de-la-noblesse
 
-### Test it before you save it
-The plugin allows for running any branching dialogue within the editor itself for quick testing and faster iteration times. No need to run your game every time you modify the dialogue. Under the hood, this uses the same `DialogueBox` node you'll use in your project. So, you'll know exactly how your dialogue will run in-game without even running the game!
+## Captures d'écran
+Écran de démarrage :
 
-Additionally, enable the debugging toggle to understand what all events are occuring as the dialogue runs. Note: this feature only works in the editor, not the game.
+![](https://lh7-us.googleusercontent.com/YB3w-cv6sR4c35C-RB4aZVatAkn4UyKI34TvCmnKscxvW-im3-0vozF--4UlEX9OrcMX_VL6tck_rOxkw3L9rsDVRtEa3Eu_PXyZ-WiaIkFMT1li2p6lUBtNjFZCAMFLlntFKslKPvPfeM46gN_BRWk)Écran de jeu :
+![](https://lh7-us.googleusercontent.com/3PVP1hZq5guedldDWvVeaW42gDm47oVviln-xKkp2Rp9ysbvaIyCbhLE0yqQvsJmmVR-Bp2-ha5ttqpD_ZgtbXC-4W6RocrVx47FMSghQH6ZD1u70GaQBylZxB0EsChMCKHO2_sfggJdh12QZo-CDwQ)Intérieur église :
+![](https://lh7-us.googleusercontent.com/d8CqSBkkGnWtG8vjJ8dz8f8QcJ2Y0Uu7ulXX2CCJGNwaLty4rJednL3JPnwjkJmzzextqKmXKg60dHwxfNu8rnoN4qkQsu9Z_DrCQBFIgjSqqc54hwvcuNcsPyst9WPLtspso6GcZWoeO2a45okcPhc)Intérieur du marché :
+![](https://lh7-us.googleusercontent.com/fXUPsJwJK5b5F2B8tzrfyakhq9A0JU-WKhktmsjaEkQT_VDrGySD8jIy2fjT6XJgIS1RHqf9OoMSq1D9WLEO1z-lGT7czsA4Y4uVC8AIbXzjKZOWukSgmCEzvWCJBba2uN9Msf1cEGYiHqPEY-D1lWg)Intérieur de la taverne :
+![](https://lh7-us.googleusercontent.com/7I9Ai0d_iwVq7O5M0TGblmh3RGfYrWN4_ddob9gn1AKqfgdFMuZn-WszBDDXqNq0n4wl-mEHvTtudTxJ1zFnk83XlxVPokvIJdw5BQhygVjZsuggFFiIala18x69nlKWhdUGdYJH-9TGYTJWebbvAcU)
 
-### Put a dialogue box in your game in just 2 steps
-Once you have your dialogue files and are ready to test them out in-game, the plugin provides a super simple way of creating dialogue boxes for your game.
+## Procédure d'installation et d'exécution
 
-1. Add the `DialogueBox` node to your scene and set its position and size as per your requirements.
-2. Select the dialogue file from the inspector and run `$DialogueBox.start('<YOUR_START_ID>')` in your code to start the dialogue.
 
-The `DialogueBox` node provides several options to customize the look and layout to your liking. However, being derived from `Control` nodes, it is recommended to change the colors, font and borders using Godot's theme editor.
-
-### Localize it!
-The dialogue files are stored as Godot Resources, which are not only easy to edit, load and save, but also great for localizing using Godot awesome localization remap tools!
-
-Prefer other localization methods? Stay tuned as more localization options are planned for future releases.
-
-#####
-## Learn more
-Read [the wiki](https://github.com/nagidev/DialogueNodes/wiki) to learn how to get started with using the plugin and adding dialogues to your awesome games!
-
-Note: The wiki is still being updated frequently. Some of the functionalities might not be documented. Please expect more updates soon, and feel free to [contact me](https://twitter.com/NagiDev) if you want to contribute to the documentation. (I could really use some help here lol!)
-
-#####
-## Known issues
-- DialogueNode in the workplace may have wrong colored slots on light themes
-- Using return character in the dialogue results in options not showing up in certain cases
-- Shifting focus to empty option from another empty option results in the option data moving around
-
-If you find any bugs or issues, [report them in the issues page](https://github.com/nagidev/DialogueNodes/issues). Please ensure the same or a similar issues isn't already present before creating your own.
