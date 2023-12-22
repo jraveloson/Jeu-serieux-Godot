@@ -29,11 +29,11 @@ nodes = {
 },
 2: {
 "condition": {},
-"link": &"4_5",
+"link": &"5_4",
 "text": "Jouer aux jeux de société"
 }
 },
-"size": Vector2(444.798, 443.183),
+"size": Vector2(383.19, 392.094),
 "speaker": -1
 },
 "1_2": {
@@ -46,7 +46,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 275.999),
+"size": Vector2(300.002, 276),
 "speaker": ""
 },
 "1_3": {
@@ -72,7 +72,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": ""
 },
 "1_5": {
@@ -85,7 +85,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.001, 275.999),
+"size": Vector2(300.001, 276),
 "speaker": ""
 },
 "1_6": {
@@ -99,6 +99,32 @@ nodes = {
 }
 },
 "size": Vector2(300.001, 276),
+"speaker": "Tavernier"
+},
+"1_7": {
+"dialogue": "Vous n'avez pas assez d'argent poour jouer",
+"offset": Vector2(400, 780),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Tavernier"
+},
+"1_8": {
+"dialogue": "Vous avez perdu, quel dommage !",
+"offset": Vector2(1100, 960),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
 "speaker": "Tavernier"
 },
 "4_1": {
@@ -124,9 +150,9 @@ nodes = {
 },
 "4_5": {
 "link": &"4_6",
-"offset": Vector2(920, 660),
+"offset": Vector2(1100, 640),
 "type": 1,
-"value": "20",
+"value": "10",
 "variable": "richesse"
 },
 "4_6": {
@@ -135,6 +161,13 @@ nodes = {
 "type": 1,
 "value": "50",
 "variable": "prestige"
+},
+"4_7": {
+"link": &"1_8",
+"offset": Vector2(760, 840),
+"type": 2,
+"value": "10",
+"variable": "richesse"
 },
 "5_1": {
 "false": &"1_6",
@@ -151,9 +184,29 @@ nodes = {
 "true": &"4_1",
 "value1": "{{richesse}}",
 "value2": "30"
+},
+"5_3": {
+"false": &"4_7",
+"offset": Vector2(740, 580),
+"operator": 0,
+"true": &"4_5",
+"value1": "{{chance}}",
+"value2": "true"
+},
+"5_4": {
+"false": &"1_7",
+"offset": Vector2(400, 580),
+"operator": 4,
+"true": &"5_3",
+"value1": "{{richesse}}",
+"value2": "10"
 }
 }
 variables = {
+"chance": {
+"type": 1,
+"value": false
+},
 "prestige": {
 "type": 2,
 "value": 100.0

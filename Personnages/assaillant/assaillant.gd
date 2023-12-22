@@ -41,7 +41,7 @@ func _process(delta):
 		if bodie is CharacterBody2D:
 			$TimerDetection.start()
 			show_label()
-			if Input.is_action_pressed("Intéraction") && peutInterargir == true && etatDialogue == false && visibilite == true:
+			if Input.is_action_pressed("Intéraction") && Global.occupe == false && peutInterargir == true && etatDialogue == false && visibilite == true:
 				$CL_Assaillant/DialogueBoxAssaillant.start("Assaillant")
 	if bodies.is_empty():
 		hide_label()

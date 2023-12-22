@@ -46,7 +46,7 @@ nodes = {
 },
 "1_3": {
 "dialogue": "Le Noble n'a pas accepté votre proposition. Vous avez été humilié lors de votre demande en public.",
-"offset": Vector2(1660, 380),
+"offset": Vector2(2140, 360),
 "options": {
 0: {
 "condition": {},
@@ -71,10 +71,17 @@ nodes = {
 "speaker": "Noble"
 },
 "4_1": {
-"link": &"1_3",
+"link": &"4_2",
 "offset": Vector2(1160, 360),
 "type": 2,
 "value": "50",
+"variable": "prestige"
+},
+"4_2": {
+"link": &"1_3",
+"offset": Vector2(1600, 360),
+"type": 4,
+"value": "2",
 "variable": "prestige"
 },
 "5_1": {

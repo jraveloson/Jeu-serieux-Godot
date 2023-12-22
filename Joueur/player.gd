@@ -10,7 +10,7 @@ var animation_locked : bool = false
 var direction : Vector2 = Vector2.ZERO
 var was_in_air : bool = false
 var dialogueActiver = false
-var idDialogue
+var idDialogue = ""
 
 func _ready():
 	$TimerProgressionJeu.wait_time = 1
@@ -20,7 +20,10 @@ func _ready():
 
 func _physics_process(delta):
 	
-
+	if idDialogue != "":
+		Global.occupe = true
+	else:
+		Global.occupe = false
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta

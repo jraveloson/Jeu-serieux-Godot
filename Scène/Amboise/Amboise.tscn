@@ -30,7 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://d1wmm1av4qdbk" path="res://Joueur/player.tscn" id="25_htlx1"]
 [ext_resource type="PackedScene" uid="uid://djxdtt3vjs136" path="res://notaire.tscn" id="29_w0b0h"]
 [ext_resource type="Resource" uid="uid://dw6qxftjd4dys" path="res://Personnages/notaire/dialogueNotaire.tres" id="30_orr2w"]
-[ext_resource type="PackedScene" path="res://Personnages/assaillant/assaillant.tscn" id="31_wcg8s"]
+[ext_resource type="PackedScene" uid="uid://dq8a70s65hjut" path="res://Personnages/assaillant/assaillant.tscn" id="31_wcg8s"]
 [ext_resource type="Resource" uid="uid://cjd1vw3poid65" path="res://Personnages/assaillant/dialogueAssaillant.tres" id="32_ladb1"]
 [ext_resource type="PackedScene" uid="uid://c1kmcd4aeh5ds" path="res://Personnages/noble/noble.tscn" id="33_a47v6"]
 [ext_resource type="Resource" uid="uid://coeqfyapp7v3b" path="res://Personnages/noble/dialogueNoble.tres" id="34_triop"]
