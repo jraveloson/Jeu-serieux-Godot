@@ -28,12 +28,12 @@ nodes = {
 "text": "Non, trouver une autre solution"
 }
 },
-"size": Vector2(300, 307),
+"size": Vector2(329.857, 335.923),
 "speaker": ""
 },
 "1_2": {
 "dialogue": "Tu es maintenant anobli. Tu as gagné.",
-"offset": Vector2(1880, 0),
+"offset": Vector2(2100, -120),
 "options": {
 0: {
 "condition": {},
@@ -65,11 +65,18 @@ nodes = {
 "variable": "richesse"
 },
 "4_2": {
-"link": &"1_2",
+"link": &"4_3",
 "offset": Vector2(1480, 60),
-"type": 0,
+"type": 1,
 "value": "1000",
 "variable": "prestige"
+},
+"4_3": {
+"link": &"1_2",
+"offset": Vector2(1760, -80),
+"type": 0,
+"value": "true",
+"variable": "noblesse"
 },
 "5_1": {
 "false": &"1_3",
@@ -81,6 +88,10 @@ nodes = {
 }
 }
 variables = {
+"noblesse": {
+"type": 1,
+"value": false
+},
 "prestige": {
 "type": 2,
 "value": 0.0
