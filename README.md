@@ -27,10 +27,10 @@ https://git.unistra.fr/t3_mod23_e/amboise/-/wikis/Les-voies-de-la-noblesse
 
 ## Procédure d'installation et d'exécution
 ### Windows 
-[Installateur]{https://git.unistra.fr/maguillemain/amboise-mathilde/-/tree/main/Installer}
-[Executable]{https://git.unistra.fr/maguillemain/amboise-mathilde/-/tree/main/Executables/Windows}
+[Installateur](https://git.unistra.fr/maguillemain/amboise-mathilde/-/tree/main/Installer)
+[Executable](https://git.unistra.fr/maguillemain/amboise-mathilde/-/tree/main/Executables/Windows)
 ### Linux
-[Executable]{https://git.unistra.fr/maguillemain/amboise-mathilde/-/tree/main/Executables/Linux}
+[Executable](https://git.unistra.fr/maguillemain/amboise-mathilde/-/tree/main/Executables/Linux)
 >Pour executer le fichier x86:
 ```bash
     chmod u+x <fichier>
