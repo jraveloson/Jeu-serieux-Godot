@@ -17,6 +17,10 @@ func _process(_delta):
 func trigger_end_screen(endCondition : String):
 	match endCondition:
 		#Conditions de défaite
+		"temps":
+			$Panel/MarginContainer/VBoxContainer/endStateLabel.text = perdu
+			$Panel/MarginContainer/VBoxContainer/endCondition.text = "Durant 5 générations vous n'avez pas réussi à être noble..."
+			show()
 		"death":
 			$Panel/MarginContainer/VBoxContainer/endStateLabel.text = perdu
 			$Panel/MarginContainer/VBoxContainer/endCondition.text = "Votre état de santé à eu raison de vous ..."

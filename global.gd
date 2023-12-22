@@ -143,5 +143,7 @@ func verifyEndCondition():
 	elif (prestige < 0):
 		_ready()
 		return "dishonor"
+	elif tempsJeu >= tempsMax:
+		return "temps"
 	else:
 		return "notfinished"
