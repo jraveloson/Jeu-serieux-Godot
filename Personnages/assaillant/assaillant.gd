@@ -18,6 +18,7 @@ func _process(delta):
 	$CL_Assaillant/DialogueBoxAssaillant.set_variable("prestige", TYPE_INT, Global.prestige)
 	$CL_Assaillant/DialogueBoxAssaillant.set_variable("richesse", TYPE_INT, Global.richesse)
 	$CL_Assaillant/DialogueBoxAssaillant.set_variable("vie", TYPE_INT, Global.vie)
+	$CL_Assaillant/DialogueBoxAssaillant.set_variable("chance", TYPE_INT, Global.chanceAssaillant)
 	if visibilite != true:
 		self.visible = false
 		Global.tempsRestantAssaillant = $TimerVisibilite.time_left
@@ -59,6 +60,7 @@ func _ready():
 	$CL_Assaillant/DialogueBoxAssaillant.set_variable("prestige", TYPE_INT, Global.prestige)
 	$CL_Assaillant/DialogueBoxAssaillant.set_variable("richesse", TYPE_INT, Global.richesse)
 	$CL_Assaillant/DialogueBoxAssaillant.set_variable("vie", TYPE_INT, Global.vie)
+	$CL_Assaillant/DialogueBoxAssaillant.set_variable("chance", TYPE_INT, Global.chanceAssaillant)
 	if Global.tempsRestantAssaillant == 0:
 		visibilite = true
 	else:
