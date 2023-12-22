@@ -66,4 +66,7 @@ func _on_dialogue_box_notaire_variable_changed(var_name, value):
 		Global.prestige = value
 	if var_name == "richesse":
 		Global.richesse = value
+	if var_name == "noblesse":
+		Global.noblesse = value
+		print(Global.noblesse)
 

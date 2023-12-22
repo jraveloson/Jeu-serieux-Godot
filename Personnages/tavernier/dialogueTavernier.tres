@@ -111,7 +111,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Tavernier"
 },
 "1_8": {
@@ -124,7 +124,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Tavernier"
 },
 "4_1": {
@@ -138,7 +138,7 @@ nodes = {
 "link": &"1_2",
 "offset": Vector2(2000, 400),
 "type": 1,
-"value": "100",
+"value": "175",
 "variable": "prestige"
 },
 "4_3": {
