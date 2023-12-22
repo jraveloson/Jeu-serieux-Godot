@@ -11704,10 +11704,11 @@ script = ExtResource("18_vptgf")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_um8k1"]
 size = Vector2(73, 118)
 
-[node name="Taverne" type="Node2D" node_paths=PackedStringArray("pause_manager", "ui_manager")]
+[node name="Taverne" type="Node2D" node_paths=PackedStringArray("pause_manager", "ui_manager", "end_menu")]
 script = ExtResource("1_r5uea")
 pause_manager = NodePath("CanvasLayer/pausemenu")
 ui_manager = NodePath("CanvasLayer/UI")
+end_menu = NodePath("CanvasLayer/EndScreen")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
