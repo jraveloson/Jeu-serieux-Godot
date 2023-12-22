@@ -1,5 +1,7 @@
 extends Control
 
+class_name EndManager
+
 var perdu : String = "Vous avez perdu ..."
 var gagne : String = "Vous avez gagné !"
 
@@ -18,24 +20,34 @@ func trigger_end_screen(endCondition : String):
 		"death":
 			$Panel/MarginContainer/VBoxContainer/endStateLabel.text = perdu
 			$Panel/MarginContainer/VBoxContainer/endCondition.text = "Votre état de santé à eu raison de vous ..."
+			show()
 		"poverty":
 			$Panel/MarginContainer/VBoxContainer/endStateLabel.text = perdu
 			$Panel/MarginContainer/VBoxContainer/endCondition.text = "Vous avez du vendre tout ce que vous aviez pour vous nourir ..."
+			show()
 		"dishonor":
 			$Panel/MarginContainer/VBoxContainer/endStateLabel.text = perdu
 			$Panel/MarginContainer/VBoxContainer/endCondition.text = "Votre nom évoque rires et insultes à la cour royale ..."
-		
+			show()
+			
 		#Conditions de victoire
 		"bought":
 			$Panel/MarginContainer/VBoxContainer/endStateLabel.text = gagne
 			$Panel/MarginContainer/VBoxContainer/endCondition.text = "Vous avez acheté votre titre de noblesse !"
+			show()
 		"married":
 			$Panel/MarginContainer/VBoxContainer/endStateLabel.text = gagne
 			$Panel/MarginContainer/VBoxContainer/endCondition.text = "Votre marriage vous accorde le titre de noble !"
+			show()
 		"king":
 			$Panel/MarginContainer/VBoxContainer/endStateLabel.text = gagne
 			$Panel/MarginContainer/VBoxContainer/endCondition.text = "Le roy vous a anobli devant la cour royale !"
-	show()
+			show()
+		"notfinished":
+			pass
+		_:
+			pass
+
 
 func _on_restart_button_pressed():
 	
@@ -44,8 +56,10 @@ func _on_restart_button_pressed():
 	
 	
 	pass # Replace with function body.
-
-
+	Global.recommencer = true
+	get_tree().reload_current_scene()
+	hide()
+	
 func _on_menu_button_pressed():
 	get_tree().change_scene_to_file("res://Scène/EcranTitre/EcranTitre.tscn")
 

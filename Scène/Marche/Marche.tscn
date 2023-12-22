@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://q8c6jp3u0fwa"]
+[gd_scene load_steps=34 format=3 uid="uid://q8c6jp3u0fwa"]
 
 [ext_resource type="Texture2D" uid="uid://dulyov87ewjon" path="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png" id="1_f38rd"]
 [ext_resource type="Script" path="res://Scène/Marche/marche.gd" id="1_lo7jq"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b1rynhpriijc7" path="res://InterfaceUtilisateur/UserInterface/UI.tscn" id="3_o0rvp"]
 [ext_resource type="PackedScene" uid="uid://cnbftu8sfqg3g" path="res://InterfaceUtilisateur/OptionMenu/optionsmenu.tscn" id="4_ry72x"]
 [ext_resource type="Texture2D" uid="uid://d1j5da62rtbta" path="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/orange.png" id="4_t4oqj"]
+[ext_resource type="PackedScene" uid="uid://dax5kh61mc1yx" path="res://InterfaceUtilisateur/EndScreen/end_screen.tscn" id="5_8fq1i"]
 [ext_resource type="Texture2D" uid="uid://cxt5dkshh2h3f" path="res://Assets/Legacy-Fantasy - High Forest 2.3/Assets/orange (2).png" id="5_flbyl"]
 [ext_resource type="PackedScene" uid="uid://d1wmm1av4qdbk" path="res://Joueur/player.tscn" id="8_qyw8q"]
 [ext_resource type="Script" path="res://Scène/Marche/SortieMarche.gd" id="9_n4jcv"]
@@ -3996,10 +3997,11 @@ script = ExtResource("13_j3kiy")
 [sub_resource type="RichTextEffect" id="RichTextEffect_5mvie"]
 script = ExtResource("14_jfkla")
 
-[node name="Marche" type="Node2D" node_paths=PackedStringArray("pause_manager", "ui_manager")]
+[node name="Marche" type="Node2D" node_paths=PackedStringArray("pause_manager", "ui_manager", "end_menu")]
 script = ExtResource("1_lo7jq")
 pause_manager = NodePath("CanvasLayer/pausemenu")
 ui_manager = NodePath("CanvasLayer/UI")
+end_menu = NodePath("CanvasLayer/EndScreen")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -4009,6 +4011,8 @@ ui_manager = NodePath("CanvasLayer/UI")
 
 [node name="optionsmenu" parent="CanvasLayer" node_paths=PackedStringArray("caller") instance=ExtResource("4_ry72x")]
 caller = NodePath("../pausemenu")
+
+[node name="EndScreen" parent="CanvasLayer" instance=ExtResource("5_8fq1i")]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_xw506")

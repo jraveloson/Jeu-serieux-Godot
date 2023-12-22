@@ -123,3 +123,17 @@ func restart():
 		_ready()
 		recommencer = false
 		resetTimerAssaillant = true
+
+func verifyEndCondition():
+	if (prestige > 1000):
+		return "king"
+	elif (noblesse):
+		return "bought"
+	elif (mariage):
+		return "married"
+	elif (vie == 0):
+		return "death"
+	elif (prestige < 0):
+		return "dishonor"
+	else:
+		return "notfinished"
