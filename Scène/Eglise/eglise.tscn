@@ -6172,9 +6172,11 @@ ui_manager = NodePath("CanvasLayer/UI")
 [node name="UI" parent="CanvasLayer" instance=ExtResource("2_q8xff")]
 metadata/_edit_use_anchors_ = true
 
-[node name="pausemenu" parent="CanvasLayer" instance=ExtResource("2_n0i1r")]
+[node name="pausemenu" parent="CanvasLayer" node_paths=PackedStringArray("option_menu") instance=ExtResource("2_n0i1r")]
+option_menu = NodePath("../optionsmenu")
 
-[node name="optionsmenu" parent="CanvasLayer" instance=ExtResource("4_ytx81")]
+[node name="optionsmenu" parent="CanvasLayer" node_paths=PackedStringArray("caller") instance=ExtResource("4_ytx81")]
+caller = NodePath("../pausemenu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(290, 599)

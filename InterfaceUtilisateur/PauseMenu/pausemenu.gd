@@ -29,7 +29,7 @@ func _on_recommencer_pressed():
 	Global.recommencer = true
 	#Trouver un moyen de relancer la partie 
 	#get_tree().change_scene_to_file("res://Scène/Amboise.tscn")
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://Scène/Amboise/Amboise.tscn")
 
 func _on_option_pressed():
 	option_menu.show()
