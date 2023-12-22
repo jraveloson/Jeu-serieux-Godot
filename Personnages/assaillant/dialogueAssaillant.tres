@@ -141,7 +141,7 @@ Un individu mystérieux t'extorque",
 "link": &"1_3",
 "offset": Vector2(1240, 420),
 "type": 0,
-"value": "-1",
+"value": "0",
 "variable": "richesse"
 },
 "4_4": {
