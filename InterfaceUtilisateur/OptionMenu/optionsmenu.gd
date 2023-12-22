@@ -19,10 +19,8 @@ func _process(_delta):
 func _on_quitter_pressed():
 	hide()
 	if (caller.has_method("_on_option_pressed")):
-		print("if")
 		caller.on_option_menu_close()
 	elif (caller.has_method("_on_option_closed")):
-			print("elif")
 			caller.show()
 
 func _input(event : InputEvent):

@@ -23,7 +23,7 @@ var nbOui = 0
 var nbNon = 0
 
 var prestige = 0
-var richesse = 30
+var richesse = 300	
 var vie = 3
 
 #durée du temps de jeu max
