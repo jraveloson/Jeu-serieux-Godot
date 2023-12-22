@@ -689,10 +689,11 @@ script = ExtResource("23_ndj3f")
 [sub_resource type="RichTextEffect" id="RichTextEffect_wdjd4"]
 script = ExtResource("24_jtw67")
 
-[node name="Amboise" type="Node2D" node_paths=PackedStringArray("pause_manager", "ui_manager")]
+[node name="Amboise" type="Node2D" node_paths=PackedStringArray("pause_manager", "ui_manager", "end_menu")]
 script = ExtResource("1_fr0hd")
 pause_manager = NodePath("CanvasLayer/pausemenu")
 ui_manager = NodePath("CanvasLayer/UI")
+end_menu = NodePath("CanvasLayer/EndScreen")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
