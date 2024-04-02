@@ -1,12 +1,3 @@
-# Présentation du projet T3_MOD23_E
-
-L'objectif du projet est de réaliser un jeu vidéo sérieux afin de communiquer des connaissances au joueur de manière ludique et subtile.
-### Nom du groupe : Les Vieux
-### Membres du groupe :
-AKGUL Adrien, ALLAL Gwénolé, GUILLEMAIN Mathilde, RAVELOSON Joanna.
-### Lien vers le Cahier des Charges
-https://docs.google.com/document/d/1Yb77904rVfQssaoo3OgVcBGygULyCSnuEOo0G6GO9XE/edit#heading=h.fdbtfm86g63h
-
 ### Thème : Histoire
 Le jeu se déroule dans la ville d'Amboise entre 1450 et 1574.
 
